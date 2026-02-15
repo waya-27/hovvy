@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hovvy - データ分析とアプリ開発</title>
+    <meta name="description" content="hovvyはデータ分析技術と革新的なアプリケーション開発で、より良い体験を提供します。">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/hovvy_logo.png" alt="hovvy" style="height: 40px; width: auto;">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#apps">アプリ紹介</a></li>
+                    <li><a href="#data">データ分析</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>楽しみながら、<br>健康に。</h1>
+            <p>予防医療の新しいカタチをつくる。<br>AIとデータ分析の力で、あなたの毎日をより豊かで健やかなものへ。</p>
+            <a href="#contact" class="cta-button">お問い合わせ</a>
+        </div>
+        <div class="hero-image" style="position: absolute; right: 5%; width: 40%; max-width: 500px; z-index: 1; opacity: 0.9;">
+            <!-- 抽象的なAI/ヘルステックイメージのプレースホルダー -->
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FF6600" d="M42.7,-62.9C55.4,-52.8,66.4,-41.6,73.4,-28.3C80.4,-15,83.4,0.4,80.1,14.7C76.8,29,67.2,42.2,55.4,51.8C43.6,61.4,29.6,67.4,14.8,70.6C0,73.8,-15.6,74.2,-29.8,69C-44,63.8,-56.8,53,-65.4,40.1C-74,27.2,-78.4,12.2,-77.1,-2.3C-75.8,-16.8,-68.8,-30.8,-58.1,-41.6C-47.4,-52.4,-33,-60,-19.1,-62.1C-5.2,-64.2,9.3,-60.8,24.1,-55.8C38.9,-50.8,54,-44.2,42.7,-62.9Z" transform="translate(100 100) scale(1.1)" opacity="0.1" />
+                <path fill="#00BCD4" d="M38.1,-53.4C49.3,-44.3,58.3,-32.7,64.2,-19.4C70.1,-6.1,72.9,8.9,68.6,22.8C64.3,36.7,52.9,49.5,39.8,57.4C26.7,65.3,11.9,68.3,-1.9,70.9C-15.7,73.5,-28.5,75.7,-40.1,70.1C-51.7,64.5,-62.1,51.1,-68.5,36.1C-74.9,21.1,-77.3,4.5,-73.9,-10.8C-70.5,-26.1,-61.3,-40.1,-49.2,-48.9C-37.1,-57.7,-22.1,-61.3,-8.6,-59.5C4.9,-57.7,26.9,-62.5,38.1,-53.4Z" transform="translate(100 100)" opacity="0.2" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- アプリ紹介セクション -->
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2 class="section-title">Applications</h2>
+            <div class="apps-grid">
+                <!-- アプリ1 -->
+                <div class="app-card">
+                    <div class="app-icon">📍</div>
+                    <h3>Arealist</h3>
+                    <p>直感的なエリア分析ツール。地図上で視覚的にデータを把握し、最適な意思決定をサポートします。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+                <!-- アプリ2 -->
+                <div class="app-card">
+                    <div class="app-icon">⛳</div>
+                    <h3>Golf Tracker</h3>
+                    <p>ゴルフの練習記録をデータ化。スコアアップのための課題発見と成長を可視化するトラッカー。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+                <!-- アプリ3 -->
+                <div class="app-card">
+                    <div class="app-icon">🚙</div>
+                    <h3>Kaigo Taxi</h3>
+                    <p>必要な時に、必要な場所へ。介護タクシーの配車をスムーズにする利用者と事業者のマッチングアプリ。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+                 <!-- アプリ4 -->
+                 <div class="app-card">
+                    <div class="app-icon">☀️</div>
+                    <h3>Solotice</h3>
+                    <p>シンプルで美しいデザインの日々の記録アプリ。あなたの毎日を少しだけ特別にするお手伝い。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+                 <!-- アプリ5 -->
+                 <div class="app-card">
+                    <div class="app-icon">🎨</div>
+                    <h3>シュミのしるし</h3>
+                    <p>あなたの趣味の記録を美しく残す。活動の軌跡を振り返り、モチベーションを高めるライフログアプリ。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+                 <!-- アプリ6 -->
+                 <div class="app-card">
+                    <div class="app-icon">📦</div>
+                    <h3>あれあった</h3>
+                    <p>「あれ、どこいった？」をなくす。家の中のモノの場所を簡単に記録・検索できる管理ツール。</p>
+                    <a href="#" class="app-link">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- データ分析セクション -->
+    <section id="data" class="data-analysis">
+        <div class="container">
+            <h2 class="section-title"><span>AI</span> & Data Analysis</h2>
+            <div class="analysis-content">
+                <div class="analysis-image" style="background: white; border: 2px dashed #eee; display:flex; align-items:center; justify-content:center;">
+                   <div style="font-size: 4rem;">🤖📊</div>
+                </div>
+                <div class="analysis-text">
+                    <h3>AIで予防医療の<br>新しいカタチをつくる</h3>
+                    <p>膨大な医療ビッグデータと最新のAI技術を掛け合わせ、組織や個人の健康リスクを早期に発見。楽しみながら健康維持に取り組める仕組みと、データに基づく科学的なアプローチで、予防医療の革新を目指します。</p>
+                    <ul>
+                        <li>AIと機械学習を用いた健康リスク予測モデル</li>
+                        <li>健康診断・レセプトデータの高度な統合分析</li>
+                        <li>行動変容を促すゲーミフィケーション要素の設計</li>
+                        <li>直感的に理解できる健康ダッシュボードの構築</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <table class="about-table">
+                <tr>
+                    <th>ビジョン</th>
+                    <td><strong>楽しみながら健康に</strong></td>
+                </tr>
+                <tr>
+                    <th>屋号</th>
+                    <td>hovvy (ホヴィー)</td>
+                </tr>
+                <tr>
+                    <th>代表者</th>
+                    <td>松本 和也</td> <!-- 仮の名前 -->
+                </tr>
+                <tr>
+                    <th>所在地</th>
+                    <td>〒631-0022 奈良県奈良市鶴舞西町2-36</td> <!-- 仮の住所 -->
+                </tr>
+                <tr>
+                    <th>事業内容</th>
+                    <td>スマートフォン・Webアプリの企画・開発<br>医療データ分析・コンサルティングサービス</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#apps">アプリ紹介</a>
+                <a href="#data">データ分析</a>
+                <a href="#about">会社概要</a>
+                <a href="/privacy_policy_site/index.html">プライバシーポリシー</a>
+            </div>
+            <p class="copyright">&copy; 2024 hovvy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
