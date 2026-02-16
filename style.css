@@ -104,7 +104,9 @@ nav a:hover {
 /* ヒーローセクション */
 .hero {
     height: 90vh;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%), url('images/イメージ画像（空）.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     text-align: left;
@@ -116,15 +118,7 @@ nav a:hover {
 
 /* AIの先進的なイメージ装飾 */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    right: -10%;
-    width: 60%;
-    height: 80%;
-    background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, rgba(0, 188, 212, 0.05) 50%, transparent 70%);
-    z-index: 1;
-    border-radius: 50%;
+    display: none;
 }
 
 .hero-content {
@@ -220,16 +214,16 @@ nav a:hover {
 }
 
 .app-icon {
-    width: 60px;
-    height: 60px;
-    background-color: var(--light-bg);
-    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    /* background-color: var(--light-bg); 不要な背景色を削除 */
+    /* border-radius: 12px; 画像側で角丸を制御するため削除 */
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem; /* アイコン画像の代わり */
-    color: var(--primary-color);
+    /* font-size: 1.5rem; 絵文字用スタイル削除 */
+    /* color: var(--primary-color); 絵文字用スタイル削除 */
 }
 
 .app-card h3 {
