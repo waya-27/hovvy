@@ -117,17 +117,16 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    color: var(--text-color);
+    gap: 40px; /* ★追加：テキストと画像の間の距離をここで直接コントロールする */
     padding-top: 64px;
     position: relative;
     overflow: hidden;
 }
 
 .hero-image {
-    flex: 1;
+    flex: 1.2; /* ★修正：画像側のエリアを少し広く取る */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* ★修正：centerから変更。画像を左（テキスト側）に寄せる */
     align-items: center;
     z-index: 10;
     padding-right: 40px;
@@ -142,8 +141,8 @@ nav a:hover {
 
 .hero-content {
     flex: 1;
-    max-width: 900px;
-    padding: 0 0 0 8%;
+    max-width: 550px; /* ★修正：900pxから縮小。無駄に右へ広がる「見えない壁」を削る */
+    padding: 0 0 0 5%; /* ★修正：左の余白を少し整える */
     z-index: 10;
     display: flex;
     flex-direction: column;
