@@ -6,7 +6,205 @@
     <title>シュミのしるし - hovvy</title>
     <link rel="icon" href="images/hovvy.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .app-hero-modern {
+            min-height: 70vh;
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.05) 0%, rgba(255, 153, 0, 0.08) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px 80px;
+        }
+        
+        .app-hero-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/shumi_hero.jpg') center/cover no-repeat;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        
+        .app-hero-modern-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .app-hero-modern-content .icon-large {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .typing-text {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff6600 0%, #ff9800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .app-hero-modern-content p {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 60px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .bento-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .bento-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6600, #ff9800);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .bento-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.15);
+        }
+        
+        .bento-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .bento-card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            filter: grayscale(0.2);
+        }
+        
+        .bento-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff6600;
+            margin-bottom: 12px;
+        }
+        
+        .bento-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .section-modern {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title-modern {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #222;
+            position: relative;
+        }
+        
+        .section-title-modern::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6600, #ff9800);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        
+        .cta-modern {
+            display: inline-block;
+            padding: 16px 48px;
+            background: linear-gradient(135deg, #ff6600 0%, #ff9800 100%);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .cta-modern:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .screenshot-card {
+            aspect-ratio: 9/16;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: 600;
+            border: 2px dashed #ccc;
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-card:hover {
+            border-color: #ff6600;
+            color: #ff6600;
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +212,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html" style="color: var(--primary-color);">hovvy</a>
+                <a href="index.html" style="color: var(--primary-color); text-decoration: none;">hovvy</a>
             </div>
             <nav>
                 <ul>
@@ -27,59 +225,51 @@
         </div>
     </header>
 
-    <!-- アプリ詳細ヒーロー -->
-    <div class="app-detail-hero" style="background-image: url('images/shumi_hero.jpg'), linear-gradient(to right, #ff9966, #ff5e62);">
-        <!-- 背景画像がない場合はグラデーションが表示されます -->
-        <div class="app-detail-hero-content">
-            <h1>シュミのしるし</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;">趣味を習慣化し、仲間とつながる新しいライフログ</p>
+    <!-- モダンヒーローセクション -->
+    <div class="app-hero-modern">
+        <div class="app-hero-modern-content">
+            <img src="images/shumi_icon.png" alt="シュミのしるし" class="icon-large">
+            <h1 class="typing-text">シュミのしるし</h1>
+            <p>趣味を習慣化し、仲間とつながる新しいライフログ</p>
+            <a href="#features" class="cta-modern">機能を見る</a>
         </div>
     </div>
 
-    <div class="app-detail-container">
-        <!-- アプリ概要 -->
-        <div class="app-intro">
-            <img src="images/shumi_icon.png" alt="シュミのしるし アイコン" class="app-icon-large">
-            <div class="app-description">
-                <h2 style="margin-bottom: 15px; color: var(--primary-color);">趣味を習慣化し、仲間とつながる新しいライフログ</h2>
-                <p>「シュミのしるし」は、日々の活動を記録し、無理なく習慣化するためのアプリです。スポーツやアウトドアはもちろん、日向ぼっこやコーヒータイム、お昼寝といった日常の何気ない「好き」も記録できます。</p>
+    <!-- Bento Grid 機能紹介 -->
+    <div class="section-modern" id="features">
+        <h2 class="section-title-modern">主要機能</h2>
+        <div class="bento-grid">
+            <div class="bento-card">
+                <span class="bento-card-icon">🔒</span>
+                <h3>非公開コミュニティ</h3>
+                <p>公開の抵抗感なく、プライベートな空間で互いに励まし合いながら継続をサポート。安心して仲間とつながれます。</p>
+            </div>
+            <div class="bento-card">
+                <span class="bento-card-icon">📊</span>
+                <h3>多様な趣味の記録</h3>
+                <p>スポーツからコーヒータイム、お昼寝まで。あらゆる「好き」を簡単に記録し、美しく可視化します。</p>
+            </div>
+            <div class="bento-card">
+                <span class="bento-card-icon">🔗</span>
+                <h3>データ一元管理</h3>
+                <p>hovvyエコシステムの基盤として、他のアプリのデータもここに集約。全ての活動を一箇所で管理できます。</p>
             </div>
         </div>
+    </div>
 
-        <!-- 主要機能 -->
-        <div class="app-features">
-            <h2>主要機能</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <span class="feature-item-icon">🔒</span>
-                    <h3>非公開で仲間づくり</h3>
-                    <p>公開の抵抗感なく、プライベートなコミュニティで互いに励まし合いながら継続をサポート</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-item-icon">📊</span>
-                    <h3>多様な趣味の記録</h3>
-                    <p>スポーツからコーヒータイム、お昼寝まで、あらゆる「好き」を簡単に記録・可視化</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-item-icon">🔗</span>
-                    <h3>データ一元管理</h3>
-                    <p>hovvyエコシステムの基盤として、他のアプリのデータもここに集約・管理可能</p>
-                </div>
-            </div>
+    <!-- スクリーンショット -->
+    <div class="section-modern">
+        <h2 class="section-title-modern">スクリーンショット</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">アプリの主要な画面です。後日実際の画面を追加予定です。</p>
+        <div class="screenshot-grid">
+            <div class="screenshot-card">Main Screen</div>
+            <div class="screenshot-card">Log Activity</div>
+            <div class="screenshot-card">Community</div>
+            <div class="screenshot-card">Stats</div>
         </div>
+    </div>
 
-        <!-- スクリーンショット -->
-        <div class="app-features">
-            <h2>スクリーンショット</h2>
-            <p style="margin-bottom: 20px;">アプリの主要な画面です。後日実際の画面を追加予定です。</p>
-            <div class="app-screenshots">
-                <div class="screenshot-placeholder">Main Screen</div>
-                <div class="screenshot-placeholder">Log Activity</div>
-                <div class="screenshot-placeholder">Community</div>
-                <div class="screenshot-placeholder">Stats</div>
-            </div>
-        </div>
-
+    <div style="text-align: center; padding: 40px 20px;">
         <a href="index.html" class="back-link">← トップページに戻る</a>
     </div>
 
@@ -89,6 +279,28 @@
             <p>&copy; 2024 hovvy. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 
 </body>
 </html>

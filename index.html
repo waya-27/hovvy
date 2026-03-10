@@ -7,13 +7,20 @@
     <meta name="description" content="hovvyはデータ分析技術と革新的なアプリケーション開発で、より良い体験を提供します。">
     <link rel="icon" href="images/hovvy.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Noto Sans JP', sans-serif; }
-    </style>
+    <!-- Google Fonts - Inter for modern tech feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- AI Network SVG Background (hidden initially, shown in About section) -->
+    <svg id="ai-network-svg" style="display: none;">
+        <defs>
+            <pattern id="ai-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="50" cy="50" r="2" fill="rgba(255, 102, 0, 0.2)" class="ai-node"/>
+                <line x1="50" y1="50" x2="100" y2="50" stroke="rgba(255, 102, 0, 0.1)" stroke-width="1" class="ai-line"/>
+                <line x1="50" y1="50" x2="50" y2="100" stroke="rgba(255, 102, 0, 0.1)" stroke-width="1" class="ai-line"/>
+            </pattern>
+        </defs>
+    </svg>
 
     <!-- ヘッダー -->
     <header>
@@ -35,74 +42,75 @@
 
     <!-- ヒーローセクション -->
     <section class="hero">
+        <div class="hero-gradient-mesh"></div>
         <div class="hero-content">
-            <h1>楽しみながら、<br>一日でも長く健康に</h1>
-            <p>予防医療の新しいカタチをつくる<br>AIの力で毎日をより豊かで健やかに</p>
-            <a href="#contact" class="cta-button">お問い合わせ</a>
+            <h1 class="hero-title-modern">楽しみながら、<br>一日でも長く健康に</h1>
+            <p class="hero-subtitle-modern">予防医療の新しいカタチをつくる<br>AIの力で毎日をより豊かで健やかに</p>
+            <a href="#contact" class="cta-button-modern">お問い合わせ</a>
         </div>
         <div class="hero-image">
-            <img src="images/hero_sky.png" alt="Hero Image">
+            <img src="images/hero_sky.png" alt="Hero Image" class="hero-img-float">
         </div>
     </section>
 
     <!-- アプリ紹介セクション -->
     <section id="apps" class="apps">
         <div class="container">
-            <h2 class="section-title">Applications</h2>
-            <div class="apps-grid">
-                 <!-- アプリ1 -->
-                 <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/shumi_icon.png" alt="シュミのしるし" style="width: 100%; height: 100%; border-radius: 20%;">
+            <h2 class="section-title reveal-on-scroll">Applications</h2>
+            <div class="bento-grid-apps">
+                 <!-- アプリ1 - Large card -->
+                 <div class="bento-app-card bento-large reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/shumi_icon.png" alt="シュミのしるし">
                     </div>
                     <h3>シュミのしるし</h3>
                     <p>あなたの趣味の記録を美しく残す。活動の軌跡を振り返り、モチベーションを高めるライフログアプリ。</p>
-                    <a href="shumi_no_shirushi.html" class="app-link">詳細を見る</a>
+                    <a href="shumi_no_shirushi.html" class="bento-app-link">詳細を見る →</a>
                 </div>
                  <!-- アプリ2 -->
-                 <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/areatta_icon.png" alt="あれあった" style="width: 100%; height: 100%; border-radius: 20%;">
+                 <div class="bento-app-card reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/areatta_icon.png" alt="あれあった">
                     </div>
                     <h3>あれあった</h3>
-                    <p>「あれ、どこいった？」をなくす。家の中のモノの場所を簡単に記録・検索できる管理ツール。</p>
-                    <a href="areatta.html" class="app-link">詳細を見る</a>
+                    <p>「あれ、どこいった？」をなくす。家の中のモノの場所を簡単に記録・検索。</p>
+                    <a href="areatta.html" class="bento-app-link">詳細を見る →</a>
                 </div>
                 <!-- アプリ3 -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/golf_icon.png" alt="NiceShot Log" style="width: 100%; height: 100%; border-radius: 20%;">
+                <div class="bento-app-card reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/golf_icon.png" alt="NiceShot Log">
                     </div>
                     <h3>NiceShot Log</h3>
-                    <p>ゴルフの練習記録をデータ化。スコアアップのための課題発見と成長を可視化するトラッカー。</p>
-                    <a href="nice_shot_log.html" class="app-link">詳細を見る</a>
+                    <p>ゴルフの練習記録をデータ化。スコアアップのための課題発見と成長を可視化。</p>
+                    <a href="nice_shot_log.html" class="bento-app-link">詳細を見る →</a>
                 </div>
                 <!-- アプリ4 -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/arealist_icon.png" alt="Arealist" style="width: 100%; height: 100%; border-radius: 20%;">
+                <div class="bento-app-card reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/arealist_icon.png" alt="Arealist">
                     </div>
                     <h3>Arealist</h3>
-                    <p>直感的なエリア分析ツール。地図上で視覚的にデータを把握し、最適な意思決定をサポートします。</p>
-                    <a href="arealist.html" class="app-link">詳細を見る</a>
+                    <p>直感的なエリア分析ツール。地図上で視覚的にデータを把握。</p>
+                    <a href="arealist.html" class="bento-app-link">詳細を見る →</a>
                 </div>
-                 <!-- アプリ5 -->
-                 <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/parallelcook_icon.png" alt="ParallelCook" style="width: 100%; height: 100%; border-radius: 20%;">
+                 <!-- アプリ5 - Large card -->
+                 <div class="bento-app-card bento-large reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/parallelcook_icon.png" alt="ParallelCook">
                     </div>
                     <h3>ParallelCook</h3>
                     <p>効率的な並行調理をサポート。複数のレシピの手順を一つにまとめ、最適なタイミングで案内するスマートキッチンタイマー。</p>
-                    <a href="parallel_cook.html" class="app-link">詳細を見る</a>
+                    <a href="parallel_cook.html" class="bento-app-link">詳細を見る →</a>
                 </div>
                 <!-- アプリ6 -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/taxi_icon.png" alt="介護タクシー予約・管理システム" style="width: 100%; height: 100%; border-radius: 20%;">
+                <div class="bento-app-card reveal-on-scroll">
+                    <div class="bento-app-icon">
+                        <img src="images/taxi_icon.png" alt="介護タクシー予約・管理システム">
                     </div>
                     <h3>介護タクシー予約・管理システム</h3>
-                    <p>安心・安全な介護タクシーサービスを支えるプラットフォーム。予約・運行管理の効率化を実現します。</p>
-                    <a href="care_taxi.html" class="app-link">詳細を見る</a>
+                    <p>安心・安全な介護タクシーサービスを支えるプラットフォーム。</p>
+                    <a href="care_taxi.html" class="bento-app-link">詳細を見る →</a>
                 </div>
 
             </div>
@@ -112,12 +120,12 @@
     <!-- データ分析セクション -->
     <section id="data" class="data-analysis">
         <div class="container">
-            <h2 class="section-title"><span>AI</span> & Data Analysis</h2>
+            <h2 class="section-title reveal-on-scroll"><span>AI</span> & Data Analysis</h2>
             <div class="analysis-content">
-                <div class="analysis-image" style="background: none; border: none; display:flex; align-items:center; justify-content:center;">
+                <div class="analysis-image reveal-on-scroll" style="background: none; border: none; display:flex; align-items:center; justify-content:center;">
                    <img src="images/ai_image.png" alt="AI & Data Analysis" style="max-height: 300px; width: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                 </div>
-                <div class="analysis-text">
+                <div class="analysis-text reveal-on-scroll">
                     <h3>AIで予防医療の<br>新しいカタチをつくる</h3>
                     <p>膨大な医療ビッグデータと最新のAI技術を掛け合わせ、組織や個人の健康リスクを早期に発見。楽しみながら健康維持に取り組める仕組みと、データに基づく科学的なアプローチで、予防医療の革新を目指します。</p>
                     <ul>
@@ -133,40 +141,41 @@
 
     <!-- 会社概要セクション -->
     <section id="about" class="about">
+        <div class="about-network-bg"></div>
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <table class="about-table">
-                <tr>
-                    <th>ビジョン</th>
-                    <td><strong>楽しみながら健康に</strong></td>
-                </tr>
-                <tr>
-                    <th>屋号</th>
-                    <td>hovvy (ホヴィー)</td>
-                </tr>
-                <tr>
-                    <th>代表者</th>
-                    <td>松本 和也</td> <!-- 仮の名前 -->
-                </tr>
-                <tr>
-                    <th>所在地</th>
-                    <td>〒631-0022 奈良県奈良市鶴舞西町2-36</td> <!-- 仮の住所 -->
-                </tr>
-                <tr>
-                    <th>事業内容</th>
-                    <td>スマートフォン・Webアプリの企画・開発<br>医療データ分析・コンサルティングサービス</td>
-                </tr>
-            </table>
+            <h2 class="section-title reveal-on-scroll">About Us</h2>
+            <div class="about-cards-grid">
+                <div class="about-card reveal-on-scroll">
+                    <div class="about-card-label">ビジョン</div>
+                    <div class="about-card-value">楽しみながら健康に</div>
+                </div>
+                <div class="about-card reveal-on-scroll">
+                    <div class="about-card-label">屋号</div>
+                    <div class="about-card-value">hovvy (ホヴィー)</div>
+                </div>
+                <div class="about-card reveal-on-scroll">
+                    <div class="about-card-label">代表者</div>
+                    <div class="about-card-value">松本 和也</div>
+                </div>
+                <div class="about-card reveal-on-scroll">
+                    <div class="about-card-label">所在地</div>
+                    <div class="about-card-value">〒631-0022<br>奈良県奈良市鶴舞西町2-36</div>
+                </div>
+                <div class="about-card about-card-wide reveal-on-scroll">
+                    <div class="about-card-label">事業内容</div>
+                    <div class="about-card-value">スマートフォン・Webアプリの企画・開発<br>医療データ分析・コンサルティングサービス</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- お問い合わせセクション -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p>ご質問やご相談は、以下のフォームよりお気軽にお問い合わせください。</p>
+            <h2 class="section-title reveal-on-scroll">Contact</h2>
+            <p class="reveal-on-scroll">ご質問やご相談は、以下のフォームよりお気軽にお問い合わせください。</p>
             <!-- Google Form埋め込み -->
-            <div class="google-form-wrapper" style="width: 100%; max-width: 640px; margin: 0 auto;">
+            <div class="google-form-wrapper reveal-on-scroll" style="width: 100%; max-width: 640px; margin: 0 auto;">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVuZ-3RvVFtzD86BL4UJ8NZzyX0jv3arEzS85tTqBIGNx_3w/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </div>
@@ -184,6 +193,26 @@
             <p class="copyright">&copy; 2025 hovvy. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Scroll Reveal Animation Script -->
+    <script>
+        // Intersection Observer for scroll reveal animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all elements with reveal-on-scroll class
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+    </script>
 
 </body>
 </html>
