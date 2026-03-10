@@ -8,156 +8,275 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        .app-hero-modern {
-            min-height: 70vh;
-            background: linear-gradient(135deg, rgba(0, 176, 155, 0.08) 0%, rgba(150, 201, 61, 0.08) 100%);
+        :root {
+            --app-color: #00b09b;
+            --app-bg: #fafafa;
+        }
+        
+        /* 1. ヒーローセクション */
+        .app-hero-showcase {
+            min-height: 85vh;
+            background: var(--app-bg);
             display: flex;
             align-items: center;
-            justify-content: center;
+            padding: 100px 5% 60px;
             position: relative;
-            overflow: hidden;
-            padding: 100px 20px 80px;
+            overflow: visible;
         }
         
-        .app-hero-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/golf_graphic.png') center/cover no-repeat;
-            opacity: 0.15;
-            z-index: 0;
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            width: 100%;
         }
         
-        .app-hero-modern-content {
-            max-width: 900px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
+        .hero-text {
+            padding-right: 40px;
         }
         
-        .app-hero-modern-content .icon-large {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 176, 155, 0.3);
-            animation: float 3s ease-in-out infinite;
+        .hero-catchcopy {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            letter-spacing: -0.02em;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .typing-text {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .app-hero-modern-content p {
-            font-size: 1.3rem;
+        .hero-subcopy {
+            font-size: 1.4rem;
             color: #666;
-            margin-bottom: 40px;
+            line-height: 1.6;
             font-weight: 400;
         }
         
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin: 60px auto;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-        
-        .bento-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .hero-visual {
             position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(30px);
+            display: flex;
+            justify-content: flex-end;
         }
         
-        .bento-card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .hero-visual img {
+            max-width: 120%;
+            height: auto;
+            animation: heroFloat 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.15));
         }
         
-        .bento-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #00b09b, #96c93d);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
         
-        .bento-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 60px rgba(0, 176, 155, 0.15);
+        /* 2. アイデンティティセクション */
+        .app-identity {
+            background: linear-gradient(135deg, var(--app-color) 0%, rgba(0, 176, 155, 0.7) 100%);
+            padding: 80px 5%;
+            text-align: center;
+            color: white;
         }
         
-        .bento-card:hover::before {
-            transform: scaleX(1);
+        .identity-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
         
-        .bento-card h3 {
-            font-size: 1.4rem;
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 30px;
+            display: block;
+        }
+        
+        .app-name-logo {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .store-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
             font-weight: 700;
-            color: #00b09b;
-            margin-bottom: 12px;
-        }
-        
-        .bento-card p {
             font-size: 1rem;
-            line-height: 1.7;
-            color: #666;
+            transition: all 0.3s ease;
         }
         
-        .section-modern {
-            padding: 80px 20px;
+        .store-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 3. フィーチャーセクション */
+        .features-showcase {
+            padding: 120px 5%;
+            background: white;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .section-title-modern {
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #222;
-        }
-        
-        .section-title-modern::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #00b09b, #96c93d);
-            margin: 20px auto 0;
-            border-radius: 2px;
-        }
-        
-        .screenshot-grid {
+        .feature-row {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 100px;
+            align-items: center;
+            margin-bottom: 140px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .feature-row.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-row.reverse {
+            grid-template-columns: 1.5fr 1fr;
+        }
+        
+        .feature-row.reverse .feature-visual {
+            order: 2;
+        }
+        
+        .feature-row.reverse .feature-content {
+            order: 1;
+        }
+        
+        .feature-visual {
+            position: relative;
+        }
+        
+        .phone-mockup {
+            background: linear-gradient(145deg, #f0f0f0, #ffffff);
+            border-radius: 32px;
+            padding: 12px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        
+        .phone-mockup img {
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+        }
+        
+        .feature-content {
+            padding: 20px;
+        }
+        
+        .feature-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .feature-description {
+            font-size: 1.15rem;
+            color: #555;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-catchcopy {
+                font-size: 3rem;
+            }
+            
+            .hero-visual {
+                justify-content: center;
+            }
+            
+            .hero-visual img {
+                max-width: 90%;
+            }
+            
+            .feature-row,
+            .feature-row.reverse {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                margin-bottom: 100px;
+            }
+            
+            .feature-row.reverse .feature-visual,
+            .feature-row.reverse .feature-content {
+                order: unset;
+            }
+            
+            .feature-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .app-hero-showcase {
+                min-height: auto;
+                padding: 80px 5% 40px;
+            }
+            
+            .hero-catchcopy {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subcopy {
+                font-size: 1.1rem;
+            }
+            
+            .app-icon-large {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .app-name-logo {
+                font-size: 2.2rem;
+            }
+            
+            .features-showcase {
+                padding: 80px 5%;
+            }
+            
+            .feature-row {
+                margin-bottom: 80px;
+            }
+            
+            .phone-mockup {
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -182,45 +301,45 @@
         </div>
     </header>
 
-    <!-- モダンヒーローセクション -->
-    <div class="app-hero-modern">
-        <div class="app-hero-modern-content">
-            <img src="images/golf_icon.png" alt="NiceShot Log" class="icon-large">
-            <h1 class="typing-text">NiceShot Log</h1>
-            <p>ゴルフの打ちっぱなしを科学する、データドリブンな上達支援</p>
-        </div>
-    </div>
-
-    <!-- フィーチャーグラフィック -->
-    <div class="feature-graphic-section">
-        <div class="feature-graphic-container">
-            <img src="images/golf_graphic.png" alt="NiceShot Log フィーチャーグラフィック">
-        </div>
-    </div>
-
-    <!-- スクリーンショット＆機能紹介 -->
-    <div class="screenshots-features-section">
-        <div class="screenshots-features-grid">
-            <div class="screenshots-column">
-                <img src="images/golf_shot1.png" alt="NiceShot Log スクリーンショット1">
-                <img src="images/golf_shot2.png" alt="NiceShot Log スクリーンショット2">
+    <!-- ヒーローセクション -->
+    <section class="app-hero-showcase">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-catchcopy">練習の一球一球を、スコアアップに変える</h1>
+                <p class="hero-subcopy">ゴルフの打ちっぱなしをデータ化し、クラブ別の成長を可視化。戦略的な練習で最短ルートで上達</p>
             </div>
-            <div class="features-column">
-                <div class="feature-box" style="border-left-color: #00b09b;">
-                    <h3 style="color: #00b09b;">クラブ別データ記録</h3>
-                    <p>ウッド、ユーティリティ、アイアンごとのナイスショット率・平均飛距離を詳細に記録。データで自分の成長を可視化できます。</p>
-                </div>
-                <div class="feature-box" style="border-left-color: #00b09b;">
-                    <h3 style="color: #00b09b;">シミュレーションモード</h3>
-                    <p>実際のラウンドを想定し、クラブを持ち替えながら本番さながらの練習が可能。戦略的な練習で実力アップ。</p>
-                </div>
-                <div class="feature-box" style="border-left-color: #00b09b;">
-                    <h3 style="color: #00b09b;">戦略的ラウンド設定</h3>
-                    <p>練習データをもとに、コースでの戦略立てをサポート。弱点を把握して効率的に上達できます。</p>
-                </div>
+            <div class="hero-visual">
+                <img src="images/golf_graphic.png" alt="NiceShot Log フィーチャーグラフィック">
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- アイデンティティセクション -->
+    <section class="app-identity">
+        <div class="identity-container">
+            <img src="images/golf_icon.png" alt="NiceShot Log アイコン" class="app-icon-large">
+            <h2 class="app-name-logo">NiceShot Log</h2>
+            <div class="store-buttons">
+                <a href="#" class="store-button">App Storeでダウンロード</a>
+                <a href="#" class="store-button">Google Playでダウンロード</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フィーチャーセクション -->
+    <section class="features-showcase">
+        <div class="feature-row">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/golf_shot1.png" alt="クラブ別データ記録画面">
+                </div>
+            </div>
+            <div class="feature-content">
+                <h3 class="feature-title">単調な打ちっぱなしを、<br>戦略的なゲームに</h3>
+                <p class="feature-description">クラブごとのナイスショット率や平均飛距離を正確に記録。実際のラウンドを想定してクラブを持ち替える「シミュレーションモード」で、自分の弱点を効率的に克服できます。蓄積したデータは、実際のコースでの論理的なクラブ選択を強力にサポートします。</p>
+            </div>
+        </div>
+    </section>
 
     <div style="text-align: center; padding: 40px 20px;">
         <a href="index.html" class="back-link">← トップページに戻る</a>
@@ -235,19 +354,21 @@
 
     <!-- Scroll Reveal Animation Script -->
     <script>
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+        }, observerOptions);
 
-        document.querySelectorAll('.bento-card').forEach(el => {
-            revealObserver.observe(el);
+        document.querySelectorAll('.feature-row').forEach(row => {
+            observer.observe(row);
         });
     </script>
 
