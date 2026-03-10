@@ -10,7 +10,7 @@
     <style>
         .app-hero-modern {
             min-height: 70vh;
-            background: linear-gradient(135deg, rgba(255, 102, 0, 0.05) 0%, rgba(255, 153, 0, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(210, 180, 140, 0.08) 0%, rgba(245, 222, 179, 0.08) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,7 +43,7 @@
             height: 100px;
             margin: 0 auto 30px;
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(210, 180, 140, 0.3);
             animation: float 3s ease-in-out infinite;
         }
         
@@ -55,7 +55,7 @@
         .typing-text {
             font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #ff6600 0%, #ff9800 100%);
+            background: linear-gradient(135deg, #D2B48C 0%, #F5DEB3 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
@@ -102,14 +102,14 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #ff6600, #ff9800);
+            background: linear-gradient(90deg, #D2B48C, #F5DEB3);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
         
         .bento-card:hover {
             transform: translateY(-12px);
-            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(210, 180, 140, 0.15);
         }
         
         .bento-card:hover::before {
@@ -126,7 +126,7 @@
         .bento-card h3 {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #ff6600;
+            color: #D2B48C;
             margin-bottom: 12px;
         }
         
@@ -231,42 +231,37 @@
             <img src="images/shumi_icon.png" alt="シュミのしるし" class="icon-large">
             <h1 class="typing-text">シュミのしるし</h1>
             <p>趣味を習慣化し、仲間とつながる新しいライフログ</p>
-            <a href="#features" class="cta-modern">機能を見る</a>
         </div>
     </div>
 
-    <!-- Bento Grid 機能紹介 -->
-    <div class="section-modern" id="features">
-        <h2 class="section-title-modern">主要機能</h2>
-        <div class="bento-grid">
-            <div class="bento-card">
-                <span class="bento-card-icon">🔒</span>
-                <h3>非公開コミュニティ</h3>
-                <p>公開の抵抗感なく、プライベートな空間で互いに励まし合いながら継続をサポート。安心して仲間とつながれます。</p>
-            </div>
-            <div class="bento-card">
-                <span class="bento-card-icon">📊</span>
-                <h3>多様な趣味の記録</h3>
-                <p>スポーツからコーヒータイム、お昼寝まで。あらゆる「好き」を簡単に記録し、美しく可視化します。</p>
-            </div>
-            <div class="bento-card">
-                <span class="bento-card-icon">🔗</span>
-                <h3>データ一元管理</h3>
-                <p>hovvyエコシステムの基盤として、他のアプリのデータもここに集約。全ての活動を一箇所で管理できます。</p>
-            </div>
+    <!-- フィーチャーグラフィック -->
+    <div class="feature-graphic-section">
+        <div class="feature-graphic-container">
+            <img src="images/shumi_graphic.png" alt="シュミのしるし フィーチャーグラフィック">
         </div>
     </div>
 
-    <!-- スクリーンショット -->
-    <div class="section-modern">
-        <h2 class="section-title-modern">スクリーンショット</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 20px;">アプリの主要な画面です</p>
-        <div class="screenshot-grid">
-            <img src="images/shumi_shot1.png" alt="シュミのしるし スクリーンショット1" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-            <img src="images/shumi_shot2.png" alt="シュミのしるし スクリーンショット2" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <img src="images/shumi_graphic.png" alt="シュミのしるし フィーチャーグラフィック" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+    <!-- スクリーンショット＆機能紹介 -->
+    <div class="screenshots-features-section">
+        <div class="screenshots-features-grid">
+            <div class="screenshots-column">
+                <img src="images/shumi_shot1.png" alt="シュミのしるし スクリーンショット1">
+                <img src="images/shumi_shot2.png" alt="シュミのしるし スクリーンショット2">
+            </div>
+            <div class="features-column">
+                <div class="feature-box" style="border-left-color: #D2B48C;">
+                    <h3 style="color: #D2B48C;">非公開コミュニティ</h3>
+                    <p>公開の抵抗感なく、プライベートな空間で互いに励まし合いながら継続をサポート。安心して仲間とつながれます。</p>
+                </div>
+                <div class="feature-box" style="border-left-color: #D2B48C;">
+                    <h3 style="color: #D2B48C;">多様な趣味の記録</h3>
+                    <p>スポーツからコーヒータイム、お昼寝まで。あらゆる「好き」を簡単に記録し、美しく可視化します。</p>
+                </div>
+                <div class="feature-box" style="border-left-color: #D2B48C;">
+                    <h3 style="color: #D2B48C;">データ一元管理</h3>
+                    <p>hovvyエコシステムの基盤として、他のアプリのデータもここに集約。全ての活動を一箇所で管理できます。</p>
+                </div>
+            </div>
         </div>
     </div>
 

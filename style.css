@@ -117,23 +117,24 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* ★追加：テキストと画像の間の距離をここで直接コントロールする */
-    padding-top: 64px;
+    gap: 60px;
+    padding: 64px 100px 0;
     position: relative;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero-image {
-    flex: 1.2; /* ★修正：画像側のエリアを少し広く取る */
+    flex: 1;
     display: flex;
-    justify-content: flex-start; /* ★修正：centerから変更。画像を左（テキスト側）に寄せる */
+    justify-content: center;
     align-items: center;
     z-index: 10;
-    padding-right: 40px;
 }
 
 .hero-image img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
@@ -141,8 +142,7 @@ nav a:hover {
 
 .hero-content {
     flex: 1;
-    max-width: 550px; /* ★修正：900pxから縮小。無駄に右へ広がる「見えない壁」を削る */
-    padding: 0 0 0 5%; /* ★修正：左の余白を少し整える */
+    max-width: 600px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -1007,6 +1007,122 @@ footer {
 
     .about-cards-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Feature Graphic Section */
+.feature-graphic-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feature-graphic-container {
+    position: relative;
+    animation: featureSlideIn 1s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes featureSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.feature-graphic-container img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-graphic-container:hover img {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* Screenshots and Features Layout */
+.screenshots-features-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.screenshots-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.screenshots-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.screenshots-column img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.screenshots-column img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.features-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-box {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.feature-box.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.feature-box:hover {
+    transform: translateX(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-box h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+@media (max-width: 968px) {
+    .screenshots-features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 
