@@ -500,35 +500,67 @@ footer {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
+    /* 基本設定 - 長い単語も適切に改行 */
+    body {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* セクションタイトル */
     .section-title {
         font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    /* ヒーローセクション - スマホ縦積みレイアウト */
+    .hero {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 100px 20px 40px;
+        text-align: center;
+        width: 100%;
+        min-height: auto;
     }
 
     .hero h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
 
-    .hero {
-        flex-direction: column-reverse;
-        height: auto;
-        padding: 100px 5% 60px;
-        text-align: center;
-        width: 100%;
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .hero-content {
+        width: 100%;
+        max-width: 100%;
         padding: 0;
+        padding-right: 0;
+        margin-left: 0;
         align-items: center;
+        text-align: center;
     }
 
     .hero-image {
-        margin-bottom: 30px;
         width: 100%;
         max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 30px;
+        padding-right: 0;
     }
 
+    /* モダンヒーロータイポグラフィ */
+    .hero-title-modern {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle-modern {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* ヘッダー */
     header .container {
         flex-direction: column;
         height: auto;
@@ -541,6 +573,106 @@ footer {
         font-size: 0.9rem;
     }
 
+    /* アプリカード */
+    .app-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .app-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* アプリ詳細ページ */
+    .app-detail-hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .app-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .app-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Bentoグリッド */
+    .bento-grid-apps {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-large {
+        grid-column: span 1;
+    }
+
+    .bento-app-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .bento-app-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* スクリーンショット・機能グリッド */
+    .screenshots-features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .feature-box h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .feature-box p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* About Us */
+    .company-logo {
+        height: 60px;
+    }
+
+    .about-vision h4 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .about-business h4 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card-wide {
+        grid-column: span 1;
+    }
+
+    .about-card-full {
+        grid-column: span 1;
+    }
+
+    .about-card-label {
+        font-size: 0.75rem;
+    }
+
+    .about-card-value {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* データ分析セクション */
     .analysis-content {
         flex-direction: column;
     }
@@ -550,10 +682,38 @@ footer {
         margin-bottom: 30px;
     }
 
+    .analysis-text h3 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    /* お問い合わせフォーム */
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    /* フッター */
     .footer-links {
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    /* コンテナ padding 調整 */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* 全体的なセクション padding 調整 */
+    .apps,
+    .data-analysis,
+    .about,
+    .contact {
+        padding: 60px 0;
     }
 }
 
@@ -711,32 +871,6 @@ footer {
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .app-intro {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .hero-content {
-        padding: 0 20px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero {
-        flex-direction: column-reverse;
-        padding-top: 100px;
-        height: auto;
-        padding-bottom: 50px;
-    }
-
-    .hero-image {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
 }
 
 /* ========================================
@@ -1035,33 +1169,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive adjustments for modern design */
-@media (max-width: 768px) {
-    .hero-title-modern {
-        font-size: 2.8rem;
-    }
-
-    .hero-subtitle-modern {
-        font-size: 1.1rem;
-    }
-
-    .bento-large {
-        grid-column: span 1;
-    }
-
-    .about-card-wide {
-        grid-column: span 1;
-    }
-
-    .bento-grid-apps {
-        grid-template-columns: 1fr;
-    }
-
-    .about-cards-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Feature Graphic Section */
 .feature-graphic-section {
     padding: 60px 20px;
@@ -1169,12 +1276,5 @@ footer {
     font-size: 1rem;
     line-height: 1.7;
     color: #666;
-}
-
-@media (max-width: 968px) {
-    .screenshots-features-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 }
 
