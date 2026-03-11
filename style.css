@@ -117,7 +117,6 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     padding: 64px 0 0;
     position: relative;
     overflow: hidden;
@@ -125,7 +124,8 @@ nav a:hover {
 }
 
 .hero-image {
-    flex: 1;
+    width: 50%;
+    max-width: 600px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -140,14 +140,14 @@ nav a:hover {
 }
 
 .hero-content {
-    flex: 1;
+    width: 50%;
     max-width: 550px;
-    margin-left: auto;
-    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-right: 40px;
+    z-index: 10;
 }
 
 .hero h1 {
