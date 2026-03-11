@@ -351,6 +351,15 @@ nav a:hover {
     display: block;
 }
 
+.company-origin {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
 .representative {
     font-size: 1.1rem;
     color: #666;
@@ -639,6 +648,11 @@ footer {
     /* About Us */
     .company-logo {
         height: 60px;
+    }
+
+    .company-origin {
+        font-size: 0.85rem;
+        line-height: 1.6;
     }
 
     .about-vision h4 {
