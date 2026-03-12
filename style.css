@@ -590,7 +590,7 @@ nav .nav-contact-btn:hover {
 .services-list {
     max-width: 750px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .service-item-vertical {
@@ -609,6 +609,7 @@ nav .nav-contact-btn:hover {
     letter-spacing: -0.01em;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .service-dot {
@@ -626,7 +627,8 @@ nav .nav-contact-btn:hover {
     line-height: 1.8;
     color: #555;
     font-weight: 400;
-    margin-left: 20px;
+    margin: 0 auto;
+    max-width: 650px;
 }
 
 /* 旧デザインのスタイルを無効化 */
