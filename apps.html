@@ -13,6 +13,10 @@
             --app-bg: #fafafa;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         /* フィーチャー・ショーケース */
         .features-showcase {
             background: var(--app-bg);
@@ -29,6 +33,7 @@
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            scroll-margin-top: 100px;
         }
         
         .feature-row.visible {
@@ -195,7 +200,7 @@
     <!-- アプリ一覧セクション -->
     <section class="features-showcase" style="padding-top: 100px;">
         <!-- App 1: シュミのしるし -->
-        <div class="feature-row">
+        <div id="shumi-no-shirushi" class="feature-row">
             <div class="feature-visual">
                 <div class="phone-mockup">
                     <img src="images/shumi_shot1.png" alt="シュミのしるし">
@@ -221,7 +226,7 @@
         </div>
 
         <!-- App 2: あれあった？ -->
-        <div class="feature-row reverse">
+        <div id="areatta" class="feature-row reverse">
             <div class="feature-visual">
                 <div class="phone-mockup">
                     <img src="images/Areatta_shot1.png" alt="あれあった？">
@@ -247,7 +252,7 @@
         </div>
 
         <!-- App 3: NiceShot Log -->
-        <div class="feature-row">
+        <div id="nice-shot-log" class="feature-row">
             <div class="feature-visual">
                 <div class="phone-mockup">
                     <img src="images/golf_shot1.png" alt="NiceShot Log">
@@ -273,7 +278,7 @@
         </div>
 
         <!-- App 4: Arealist -->
-        <div class="feature-row reverse">
+        <div id="arealist" class="feature-row reverse">
             <div class="feature-visual">
                 <div class="phone-mockup">
                     <img src="images/Arealist_shot1.png" alt="Arealist">
@@ -299,7 +304,7 @@
         </div>
 
         <!-- App 5: ParallelCook -->
-        <div class="feature-row">
+        <div id="parallel-cook" class="feature-row">
             <div class="feature-visual">
                 <div class="phone-mockup">
                     <img src="images/cook_shot1.png" alt="ParallelCook">
@@ -321,6 +326,24 @@
                     </div>
                 </div>
                 <p class="feature-description">自分だけのレシピを管理し、複数の料理を同時進行するための支援ツール。<br>料理が苦手な方でも迷わないよう、AIがレシピを解析して調理工程を最適化。<br>「3品同時に作るための最も効率的な手順」をナビゲートし、キッチンに立つ時間を劇的にスマートにします。</p>
+            </div>
+        </div>
+
+        <!-- App 6: 介護タクシー予約・管理システム -->
+        <div id="care-taxi" class="feature-row reverse">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/taxi_icon.png" alt="介護タクシー予約・管理システム" style="padding: 40px;">
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/taxi_icon.png" alt="介護タクシー予約・管理システム">
+                    </div>
+                    <h2 class="app-info-title">介護タクシー予約・管理システム</h2>
+                </div>
+                <p class="feature-description">各社の業務フローに最適化する、個別の予約・配車管理システム。<br>介護タクシー事業者様向けに、予約受付から配車、請求までを一元管理。<br>効率的な運営をサポートし、より質の高いサービス提供を実現します。</p>
             </div>
         </div>
     </section>
