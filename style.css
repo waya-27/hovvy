@@ -218,61 +218,65 @@ nav a:hover {
 /* フィーチャーアプリ（2カラムレイアウト） */
 .featured-app {
     display: flex;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
-    margin-bottom: 80px;
-    padding: 50px;
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .featured-app-visual {
-    flex: 1;
-    max-width: 350px;
+    flex: 0 0 60%;
+    max-width: 60%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .featured-app-visual img {
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
     height: auto;
-    border-radius: 30px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.06));
 }
 
 .featured-app-content {
-    flex: 1;
+    flex: 0 0 40%;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .featured-app-icon {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 .featured-app-icon img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    box-shadow: none;
 }
 
 .featured-app-title {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 .store-links {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -282,20 +286,35 @@ nav a:hover {
 }
 
 .store-link:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .store-link img {
-    height: 52px;
-    width: auto;
+    height: 45px;
+    width: 150px;
     display: block;
+    object-fit: contain;
 }
 
 .featured-app-description {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.8;
-    color: #666;
+    color: #444;
     margin: 0;
+}
+
+/* キャッチコピー部分を強調 */
+.featured-app-description .catchcopy {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* キャッチコピー部分（最初の1行）を強調 */
+.featured-app-description br:first-of-type {
+    display: none;
 }
 
 .featured-app-link {
@@ -454,15 +473,15 @@ nav a:hover {
 }
 
 .company-logo {
-    height: 80px;
+    height: 110px;
     width: auto;
     margin: 0 auto 25px;
     display: block;
 }
 
 .company-origin {
-    font-size: 14px;
-    color: #888;
+    font-size: 18px;
+    color: #444;
     font-weight: 400;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -473,15 +492,15 @@ nav a:hover {
 }
 
 .representative {
-    font-size: 14px;
-    color: #777;
+    font-size: 18px;
+    color: #444;
     font-weight: 400;
     margin-top: 20px;
 }
 
 .established-date {
-    font-size: 13px;
-    color: #999;
+    font-size: 18px;
+    color: #444;
 }
 
 /* ビジョン：再構成 */
@@ -492,10 +511,10 @@ nav a:hover {
 }
 
 .vision-label {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary-color);
-    letter-spacing: 0.3em;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     margin-bottom: 12px;
     position: relative;
@@ -514,7 +533,7 @@ nav a:hover {
 }
 
 .vision-message {
-    font-size: 2.8rem;
+    font-size: 2.24rem;
     font-weight: 800;
     color: #333;
     margin: 0;
@@ -529,10 +548,10 @@ nav a:hover {
 }
 
 .services-label {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.4em;
     color: var(--primary-color);
     margin-bottom: 30px;
     position: relative;
@@ -565,7 +584,7 @@ nav a:hover {
 }
 
 .service-item-vertical h5 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 8px;
@@ -965,21 +984,25 @@ footer {
     /* フィーチャーアプリ - レスポンシブ */
     .featured-app {
         flex-direction: column;
-        padding: 30px 25px;
+        padding: 0;
         gap: 35px;
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
 
     .featured-app-visual {
+        flex: 0 0 100%;
         max-width: 100%;
         width: 100%;
     }
 
     .featured-app-visual img {
         max-width: 250px;
+        margin: 0 auto;
     }
 
     .featured-app-content {
+        flex: 0 0 100%;
+        max-width: 100%;
         gap: 18px;
         text-align: left;
     }
@@ -990,7 +1013,7 @@ footer {
     }
 
     .featured-app-title {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
     }
 
     .store-links {
@@ -998,12 +1021,17 @@ footer {
     }
 
     .store-link img {
-        height: 45px;
+        height: 40px;
+        width: 135px;
     }
 
     .featured-app-description {
-        font-size: 1rem;
+        font-size: 0.95rem;
         line-height: 1.7;
+    }
+
+    .featured-app-description .catchcopy {
+        font-size: 1.05rem;
     }
 
     .other-apps-title {
