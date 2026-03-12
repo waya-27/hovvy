@@ -629,6 +629,59 @@ nav .nav-contact-btn:hover {
     margin-left: 20px;
 }
 
+/* 会社情報セクション */
+.about-company-info {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.company-info-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.company-info-label::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.company-info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.company-info-item {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.company-info-item strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.company-origin-text {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
 /* 旧デザインのスタイルを無効化 */
 .about-divider,
 .about-vision,
