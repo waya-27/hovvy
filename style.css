@@ -668,8 +668,6 @@ nav .nav-contact-btn:hover {
 }
 
 .services-list {
-    max-width: 750px;
-    margin: 0 auto;
     text-align: left;
 }
 
@@ -682,11 +680,11 @@ nav .nav-contact-btn:hover {
 }
 
 .service-item-vertical h5 {
-    font-size: 1.7rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #111;
+    color: #333;
     margin-bottom: 8px;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
     display: flex;
     align-items: center;
 }
@@ -702,11 +700,11 @@ nav .nav-contact-btn:hover {
 }
 
 .service-item-vertical p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.8;
-    color: #555;
+    color: #444;
     font-weight: 400;
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 /* 会社情報セクション */
