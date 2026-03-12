@@ -19,7 +19,7 @@
             background: var(--app-bg);
             display: flex;
             align-items: center;
-            padding: 100px 5% 60px;
+            padding: 100px 5% 0;
             position: relative;
             overflow: visible;
         }
@@ -80,7 +80,7 @@
         /* 3. フィーチャー・ショーケース */
         .features-showcase {
             background: var(--app-bg);
-            padding: 100px 5%;
+            padding: 0 5% 100px;
         }
         
         .feature-row {
@@ -181,6 +181,7 @@
         }
         
         .app-info-stores .store-link {
+            display: inline-block;
             transition: all 0.3s ease;
         }
         
@@ -190,7 +191,9 @@
         
         .app-info-stores .store-link img {
             height: 45px;
-            width: 150px;
+            width: auto;
+            max-width: 150px;
+            display: block;
             object-fit: contain;
         }
         
@@ -236,7 +239,8 @@
             
             .app-info-stores .store-link img {
                 height: 40px;
-                width: 135px;
+                width: auto;
+                max-width: 135px;
             }
         }
     </style>
