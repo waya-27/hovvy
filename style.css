@@ -215,6 +215,114 @@ nav a:hover {
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
 }
 
+/* フィーチャーアプリ（2カラムレイアウト） */
+.featured-app {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 50px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+.featured-app-visual {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-app-visual img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featured-app-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.featured-app-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.featured-app-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.featured-app-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.store-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.store-link {
+    transition: all 0.3s ease;
+}
+
+.store-link:hover {
+    transform: translateY(-3px);
+}
+
+.store-link img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.featured-app-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    margin: 0;
+}
+
+.featured-app-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.featured-app-link:hover {
+    color: #ff8800;
+    transform: translateX(4px);
+}
+
+/* その他のアプリセクション */
+.other-apps-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 .apps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -847,6 +955,55 @@ footer {
     .app-description {
         font-size: 0.95rem;
         line-height: 1.7;
+    }
+
+    /* フィーチャーアプリ - レスポンシブ */
+    .featured-app {
+        flex-direction: column;
+        padding: 30px 25px;
+        gap: 35px;
+        margin-bottom: 50px;
+    }
+
+    .featured-app-visual {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .featured-app-visual img {
+        max-width: 250px;
+    }
+
+    .featured-app-content {
+        gap: 18px;
+        text-align: left;
+    }
+
+    .featured-app-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .featured-app-title {
+        font-size: 1.8rem;
+    }
+
+    .store-links {
+        gap: 12px;
+    }
+
+    .store-link img {
+        height: 45px;
+    }
+
+    .featured-app-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .other-apps-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
     }
 
     /* Bentoグリッド */
