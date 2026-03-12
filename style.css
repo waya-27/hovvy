@@ -353,7 +353,7 @@ nav a:hover {
 }
 
 .company-origin {
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
     font-weight: 400;
     line-height: 2.0;
@@ -365,7 +365,7 @@ nav a:hover {
 }
 
 .representative {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
     font-weight: 400;
     margin-top: 20px;
@@ -401,7 +401,7 @@ nav a:hover {
 }
 
 .vision-message {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #333;
     margin: 0;
@@ -420,8 +420,21 @@ nav a:hover {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.services-label::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
 }
 
 .services-list {
@@ -439,7 +452,7 @@ nav a:hover {
 }
 
 .service-item-vertical h5 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 8px;
@@ -459,7 +472,7 @@ nav a:hover {
 }
 
 .service-item-vertical p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.7;
     color: #666;
     font-weight: 400;
@@ -499,6 +512,12 @@ nav a:hover {
     gap: 30px;
 }
 
+.press-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .press-item {
     background: white;
     padding: 30px;
@@ -507,7 +526,7 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-.press-item:hover {
+.press-item-link:hover .press-item {
     transform: translateX(4px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -532,6 +551,66 @@ nav a:hover {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #666;
+}
+
+/* プレスリリース詳細ページ */
+.press-detail {
+    padding: 140px 0 80px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    min-height: 70vh;
+}
+
+.press-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.press-detail-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.press-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.press-detail-body {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.press-detail-body p {
+    margin-bottom: 1.5em;
+}
+
+.back-to-list {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.back-to-list:hover {
+    color: #ff8800;
+    transform: translateX(-4px);
 }
 
 /* お問い合わせフォーム */
@@ -626,6 +705,36 @@ footer {
 
 .footer-links a:hover {
     opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .copyright {
@@ -791,13 +900,13 @@ footer {
     }
 
     .company-origin {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.9;
         letter-spacing: 0.03em;
     }
 
     .representative {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
     }
 
     .about-vision-vertical {
@@ -816,7 +925,7 @@ footer {
     }
 
     .vision-message {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 1.3;
     }
 
@@ -829,16 +938,21 @@ footer {
         margin-bottom: 25px;
     }
 
+    .services-label::after {
+        width: 25px;
+        bottom: -5px;
+    }
+
     .service-item-vertical {
         margin-bottom: 30px;
     }
 
     .service-item-vertical h5 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .service-item-vertical p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     /* プレスリリース */
@@ -861,6 +975,31 @@ footer {
 
     .press-description {
         font-size: 0.9rem;
+    }
+
+    /* プレスリリース詳細ページ */
+    .press-detail {
+        padding: 100px 0 60px;
+    }
+
+    .press-detail-content {
+        padding: 40px 25px;
+    }
+
+    .press-detail-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .press-detail-body {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+    .back-to-list {
+        font-size: 0.95rem;
     }
 
     .about-cards-grid {
@@ -913,6 +1052,22 @@ footer {
 
     .footer-links a {
         font-size: 0.9rem;
+    }
+
+    .social-links {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon svg {
+        width: 22px;
+        height: 22px;
     }
 
     /* コンテナ padding 調整 */
