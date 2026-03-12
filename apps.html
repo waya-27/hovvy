@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シュミのしるし - hovvy</title>
+    <title>アプリ一覧 - hovvy</title>
     <link rel="icon" href="images/hovvy.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -13,77 +13,10 @@
             --app-bg: #fafafa;
         }
         
-        /* 1. ヒーローセクション */
-        .app-hero-showcase {
-            min-height: auto;
-            background: var(--app-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 5% 40px;
-            position: relative;
-            overflow: visible;
-        }
-        
-        .hero-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .hero-text {
-            display: none;
-        }
-        
-        .hero-catchcopy {
-            font-size: 4rem;
-            font-weight: 800;
-            line-height: 1.1;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero-subcopy {
-            font-size: 1.4rem;
-            color: #666;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-        
-        .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .hero-visual img {
-            max-width: 90%;
-            width: 100%;
-            height: auto;
-            animation: heroFloat 6s ease-in-out infinite;
-            filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.15));
-        }
-        
-        @keyframes heroFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        /* 2. アプリ・アイデンティティ（2カラムレイアウト） */
-        .app-identity {
-            display: none;
-        }
-        
-        /* 3. フィーチャー・ショーケース */
+        /* フィーチャー・ショーケース */
         .features-showcase {
             background: var(--app-bg);
-            padding: 40px 5% 100px;
+            padding: 100px 5% 100px;
         }
         
         .feature-row {
@@ -202,12 +135,8 @@
         
         /* レスポンシブ */
         @media (max-width: 968px) {
-            .app-hero-showcase {
-                padding: 80px 5% 30px;
-            }
-            
-            .hero-visual img {
-                max-width: 100%;
+            .features-showcase {
+                padding: 80px 5% 60px;
             }
             
             .feature-row,
@@ -256,63 +185,23 @@
             <nav>
                 <ul>
                     <li><a href="index.html#apps">アプリ紹介</a></li>
-                    <li><a href="index.html#about">会社概要</a></li>
+                    <li><a href="about.html">会社概要</a></li>
                     <li><a href="contact.html" class="nav-contact-btn">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- 1. ヒーローセクション -->
-    <section class="app-hero-showcase">
-        <div class="hero-container">
-            <div class="hero-visual">
-                <img src="images/shumi_graphic.png" alt="シュミのしるし">
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. アプリ詳細（2カラムレイアウト） -->
-    <section class="app-identity">
-        <div class="container" style="max-width: 1200px;">
-            <div class="featured-app" style="margin-bottom: 0;">
-                <div class="featured-app-visual">
-                    <img src="images/shumi_screenshot.png" alt="シュミのしるしスクリーンショット">
-                </div>
-                <div class="featured-app-content">
-                    <div class="featured-app-icon">
-                        <img src="images/shumi_icon.png" alt="シュミのしるし">
-                    </div>
-                    <h2 class="featured-app-title">シュミのしるし</h2>
-                    <div class="store-links">
-                        <a href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%A5%E3%83%9F%E3%81%AE%E3%81%97%E3%82%8B%E3%81%97/id6752695513" target="_blank" rel="noopener noreferrer" class="store-link">
-                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.shumishirushi.shumishirushi&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
-                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
-                        </a>
-                    </div>
-                    <p class="featured-app-description">
-                        <span class="catchcopy">ゆるく繋がり、日常を「習慣」に変える。</span><br>
-                        非公開で趣味仲間の人数を知り、モチベーションを高めるライフログアプリ。<br><br>
-                        スポーツやアウトドアだけでなく、日向ぼっこやお昼寝、コーヒータイムなど、何気ない日常のすべてを記録できます。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. フィーチャー・ショーケース -->
-    <section class="features-showcase">
-        <!-- Feature 1 -->
+    <!-- アプリ一覧セクション -->
+    <section class="features-showcase" style="padding-top: 100px;">
+        <!-- App 1: シュミのしるし -->
         <div class="feature-row">
             <div class="feature-visual">
                 <div class="phone-mockup">
-                    <img src="images/shumi_shot1.png" alt="趣味記録画面">
+                    <img src="images/shumi_shot1.png" alt="シュミのしるし">
                 </div>
             </div>
             <div class="feature-content">
-                <!-- アプリ情報 -->
                 <div class="app-info-header">
                     <div class="app-info-icon">
                         <img src="images/shumi_icon.png" alt="シュミのしるし">
@@ -327,9 +216,111 @@
                         </a>
                     </div>
                 </div>
-                <!-- 説明文 -->
-                <h3 class="feature-title">ゆるく繋がり、<br>日常を「習慣」に変える</h3>
-                <p class="feature-description">スポーツやアウトドアだけでなく、日向ぼっこやお昼寝、コーヒータイムなど、何気ない日常のすべてを記録。<br>非公開のプライベートコミュニティで、抵抗感なく仲間を作りながら習慣化をサポートします<br>他のアプリで記録したデータも一元管理できる、あなたのライフログの基盤となるアプリです。</p>
+                <p class="feature-description">ゆるく繋がり、日常を「習慣」に変える。<br>非公開で趣味仲間の人数を知り、モチベーションを高めるライフログアプリ。スポーツやアウトドアだけでなく、日向ぼっこやお昼寝、コーヒータイムなど、何気ない日常のすべてを記録できます。</p>
+            </div>
+        </div>
+
+        <!-- App 2: あれあった？ -->
+        <div class="feature-row reverse">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/Areatta_shot1.png" alt="あれあった？">
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/areatta_icon.png" alt="あれあった？">
+                    </div>
+                    <h2 class="app-info-title">あれあった？</h2>
+                    <div class="app-info-stores">
+                        <a href="https://apps.apple.com/jp/app/id6738943664" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.areatta.areatta&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
+                        </a>
+                    </div>
+                </div>
+                <p class="feature-description">調味料や食材の在庫状況をスマートに管理。<br>「足りないもの」をチェックして「買い物モード」に切り替えれば、スーパーでの買い忘れをゼロに。<br>買ったものをタップするだけで、そのまま在庫リストへとシームレスに更新されます。</p>
+            </div>
+        </div>
+
+        <!-- App 3: NiceShot Log -->
+        <div class="feature-row">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/golf_shot1.png" alt="NiceShot Log">
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/golf_icon.png" alt="NiceShot Log">
+                    </div>
+                    <h2 class="app-info-title">NiceShot Log</h2>
+                    <div class="app-info-stores">
+                        <a href="https://apps.apple.com/jp/app/id6738943953" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.golf.golf&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
+                        </a>
+                    </div>
+                </div>
+                <p class="feature-description">クラブごとのナイスショット率や平均飛距離を正確に記録。<br>実際のラウンドを想定してクラブを持ち替える「SUN ROUNDモード」で、自分の弱点を効率的に克服できます。<br>蓄積したデータは、実際のコースでの論理的なクラブ選択を強力にサポートします。</p>
+            </div>
+        </div>
+
+        <!-- App 4: Arealist -->
+        <div class="feature-row reverse">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/Arealist_shot1.png" alt="Arealist">
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/arealist_icon.png" alt="Arealist">
+                    </div>
+                    <h2 class="app-info-title">Arealist</h2>
+                    <div class="app-info-stores">
+                        <a href="https://apps.apple.com/jp/app/id6738827648" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.Arealist.Arealist&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
+                        </a>
+                    </div>
+                </div>
+                <p class="feature-description">「面積」を記録する新感覚アプリ。<br>未踏の道を塗りつぶす達成感が、日々のランニングや旅行にスパイスを与えます。<br>世界中のランナーの匿名データと連携し、全ユーザーで地球をハックする体験を提供します。</p>
+            </div>
+        </div>
+
+        <!-- App 5: ParallelCook -->
+        <div class="feature-row">
+            <div class="feature-visual">
+                <div class="phone-mockup">
+                    <img src="images/cook_shot1.png" alt="ParallelCook">
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/parallelcook_icon.png" alt="ParallelCook">
+                    </div>
+                    <h2 class="app-info-title">ParallelCook</h2>
+                    <div class="app-info-stores">
+                        <a href="https://apps.apple.com/jp/app/id6738827776" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.parallelcook.parallelcook&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
+                        </a>
+                    </div>
+                </div>
+                <p class="feature-description">自分だけのレシピを管理し、複数の料理を同時進行するための支援ツール。<br>料理が苦手な方でも迷わないよう、AIがレシピを解析して調理工程を最適化。<br>「3品同時に作るための最も効率的な手順」をナビゲートし、キッチンに立つ時間を劇的にスマートにします。</p>
             </div>
         </div>
     </section>
