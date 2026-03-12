@@ -1042,7 +1042,7 @@ nav .nav-contact-btn:hover {
 footer {
     background: linear-gradient(135deg, #ff6600 0%, #ff7a1f 100%);
     color: var(--white);
-    padding: 60px 0 30px;
+    padding: 30px 0 15px;
     text-align: center;
 }
 
@@ -1051,7 +1051,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     flex-wrap: wrap;
 }
 
@@ -1103,8 +1103,8 @@ footer {
     opacity: 0.7;
     font-size: 0.85rem;
     border-top: 1px solid rgba(255,255,255,0.15);
-    padding-top: 24px;
-    margin-top: 24px;
+    padding-top: 12px;
+    margin-top: 12px;
     font-weight: 400;
 }
 
@@ -1554,30 +1554,46 @@ footer {
     }
 
     /* フッター */
+    footer {
+        padding: 25px 0 12px;
+    }
+
     .footer-links-row {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-links {
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
         margin-bottom: 0;
     }
 
     .footer-links a {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .social-links {
-        gap: 15px;
+        gap: 12px;
     }
 
-    .social-links {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        gap: 15px;
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        margin-top: 12px;
+    }
     }
 
     .social-icon {
