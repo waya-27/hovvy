@@ -590,7 +590,7 @@ nav .nav-contact-btn:hover {
 .services-list {
     max-width: 750px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .service-item-vertical {
@@ -609,7 +609,6 @@ nav .nav-contact-btn:hover {
     letter-spacing: -0.01em;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .service-dot {
@@ -627,8 +626,7 @@ nav .nav-contact-btn:hover {
     line-height: 1.8;
     color: #555;
     font-weight: 400;
-    margin: 0 auto;
-    max-width: 650px;
+    margin-left: 20px;
 }
 
 /* 旧デザインのスタイルを無効化 */
@@ -703,6 +701,31 @@ nav .nav-contact-btn:hover {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #666;
+}
+
+/* プレスリリース一覧へのリンク */
+.press-view-all {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.press-view-all-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(111, 90, 255, 0.2);
+}
+
+.press-view-all-btn:hover {
+    background: #5a46cc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(111, 90, 255, 0.3);
 }
 
 /* プレスリリース詳細ページ */
