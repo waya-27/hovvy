@@ -74,8 +74,7 @@
         
         /* 2. アプリ・アイデンティティ（2カラムレイアウト） */
         .app-identity {
-            background: #ffffff;
-            padding: 100px 5%;
+            display: none;
         }
         
         /* 3. フィーチャー・ショーケース */
@@ -150,6 +149,51 @@
             line-height: 1.8;
         }
         
+        /* アプリ情報ヘッダー */
+        .app-info-header {
+            margin-bottom: 30px;
+        }
+        
+        .app-info-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        
+        .app-info-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 18px;
+        }
+        
+        .app-info-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 15px 0;
+        }
+        
+        .app-info-stores {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .app-info-stores .store-link {
+            transition: all 0.3s ease;
+        }
+        
+        .app-info-stores .store-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .app-info-stores .store-link img {
+            height: 45px;
+            width: 150px;
+            object-fit: contain;
+        }
+        
         /* レスポンシブ */
         @media (max-width: 968px) {
             .hero-container {
@@ -178,6 +222,21 @@
             
             .phone-mockup {
                 max-width: 280px;
+            }
+            
+            .app-info-icon {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 12px;
+            }
+            
+            .app-info-title {
+                font-size: 1.1rem;
+            }
+            
+            .app-info-stores .store-link img {
+                height: 40px;
+                width: 135px;
             }
         }
     </style>
@@ -255,6 +314,22 @@
                 </div>
             </div>
             <div class="feature-content">
+                <!-- アプリ情報 -->
+                <div class="app-info-header">
+                    <div class="app-info-icon">
+                        <img src="images/shumi_icon.png" alt="シュミのしるし">
+                    </div>
+                    <h2 class="app-info-title">シュミのしるし</h2>
+                    <div class="app-info-stores">
+                        <a href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%A5%E3%83%9F%E3%81%AE%E3%81%97%E3%82%8B%E3%81%97/id6752695513" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/app_store_badge.svg" alt="App Storeからダウンロード">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.shumishirushi.shumishirushi&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                            <img src="images/google_play_badge.png" alt="Google Playで手に入れよう">
+                        </a>
+                    </div>
+                </div>
+                <!-- 説明文 -->
                 <h3 class="feature-title">ゆるく繋がり、<br>日常を「習慣」に変える</h3>
                 <p class="feature-description">スポーツやアウトドアだけでなく、日向ぼっこやお昼寝、コーヒータイムなど、何気ない日常のすべてを記録。<br>非公開のプライベートコミュニティで、抵抗感なく仲間を作りながら習慣化をサポートします<br>他のアプリで記録したデータも一元管理できる、あなたのライフログの基盤となるアプリです。</p>
             </div>

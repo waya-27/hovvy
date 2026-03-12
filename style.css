@@ -730,6 +730,18 @@ nav a:hover {
     margin-bottom: 1.5em;
 }
 
+.press-detail-body p + ul {
+    margin-top: -0.8em;
+}
+
+.press-detail-body ul {
+    margin-bottom: 1.5em;
+}
+
+.press-detail-body ul li {
+    margin-bottom: 0.5em;
+}
+
 .back-to-list {
     display: inline-flex;
     align-items: center;
