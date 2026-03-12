@@ -147,7 +147,7 @@
             .feature-row,
             .feature-row.reverse {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
             }
             
             .feature-row.reverse .feature-visual,
@@ -155,24 +155,56 @@
                 order: initial;
             }
             
+            /* スマホでは説明文を上、スクリーンショットを下に */
+            .feature-content {
+                order: 1;
+            }
+            
+            .feature-visual {
+                order: 2;
+            }
+            
             .phone-mockup {
                 max-width: 280px;
             }
             
+            /* アイコンとタイトルを横並び */
+            .app-info-header {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            
             .app-info-icon {
-                width: 70px;
-                height: 70px;
-                margin-bottom: 12px;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0;
+                margin-right: 15px;
+                flex-shrink: 0;
             }
             
             .app-info-title {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+                margin: 0;
+                padding-top: 8px;
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .app-info-stores {
+                width: 100%;
+                margin-top: 15px;
             }
             
             .app-info-stores .store-link img {
                 height: 40px;
                 width: auto;
                 max-width: 135px;
+            }
+            
+            .feature-description {
+                font-size: 0.95rem;
+                margin-top: 15px;
             }
         }
     </style>
@@ -187,6 +219,11 @@
                     <img src="images/hovvy.png" alt="hovvy" style="height: 40px; width: auto;">
                 </a>
             </div>
+            <button class="mobile-menu-toggle" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="apps.html">アプリ紹介</a></li>
@@ -196,6 +233,17 @@
             </nav>
         </div>
     </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="apps.html">アプリ紹介</a></li>
+                <li><a href="about.html">会社概要</a></li>
+                <li><a href="contact.html" class="nav-contact-btn">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- アプリ一覧セクション -->
     <section class="features-showcase" style="padding-top: 100px;">
@@ -239,10 +287,10 @@
                     </div>
                     <h2 class="app-info-title">あれあった？</h2>
                     <div class="app-info-stores">
-                        <a href="https://apps.apple.com/jp/app/id6738943664" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://apps.apple.com/jp/app/%E3%81%82%E3%82%8C%E3%81%82%E3%81%A3%E3%81%9F/id6752639135" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.areatta.areatta&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://play.google.com/store/apps/details?id=com.kondateai.gohan&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
                         </a>
                     </div>
@@ -265,10 +313,10 @@
                     </div>
                     <h2 class="app-info-title">NiceShot Log</h2>
                     <div class="app-info-stores">
-                        <a href="https://apps.apple.com/jp/app/id6738943953" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://apps.apple.com/jp/app/niceshot-log/id6759480419" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.golf.golf&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://play.google.com/store/apps/details?id=com.niceshotlog&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
                         </a>
                     </div>
@@ -291,10 +339,10 @@
                     </div>
                     <h2 class="app-info-title">Arealist</h2>
                     <div class="app-info-stores">
-                        <a href="https://apps.apple.com/jp/app/id6738827648" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://apps.apple.com/jp/app/arealist/id6759481188" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.Arealist.Arealist&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
+                        <a href="https://play.google.com/store/apps/details?id=com.arealist&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
                             <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
                         </a>
                     </div>
@@ -316,14 +364,7 @@
                         <img src="images/parallelcook_icon.png" alt="ParallelCook">
                     </div>
                     <h2 class="app-info-title">ParallelCook</h2>
-                    <div class="app-info-stores">
-                        <a href="https://apps.apple.com/jp/app/id6738827776" target="_blank" rel="noopener noreferrer" class="store-link">
-                            <img src="images/appstore@2x-e82b77c71493437d60f9154523ff1d7d.png" alt="App Storeからダウンロード">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.parallelcook.parallelcook&hl=ja" target="_blank" rel="noopener noreferrer" class="store-link">
-                            <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Playで手に入れよう">
-                        </a>
-                    </div>
+                    <p style="color: #ff6600; font-weight: 600; margin: 10px 0;">近日リリース予定</p>
                 </div>
                 <p class="feature-description">自分だけのレシピを管理し、複数の料理を同時進行するための支援ツール。<br>料理が苦手な方でも迷わないよう、AIがレシピを解析して調理工程を最適化。<br>「3品同時に作るための最も効率的な手順」をナビゲートし、キッチンに立つ時間を劇的にスマートにします。</p>
             </div>
@@ -360,6 +401,25 @@
     </footer>
 
     <script>
+        // ハンバーガーメニューの開閉
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // モバイルメニューのリンクをクリックしたらメニューを閉じる
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
         // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.2,

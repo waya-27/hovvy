@@ -18,6 +18,11 @@
                     <img src="images/hovvy.png" alt="hovvy" style="height: 40px; width: auto;">
                 </a>
             </div>
+            <button class="mobile-menu-toggle" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="apps.html">アプリ紹介</a></li>
@@ -28,6 +33,18 @@
             </nav>
         </div>
     </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="apps.html">アプリ紹介</a></li>
+                <li><a href="about.html">会社概要</a></li>
+                <li><a href="contact.html" class="nav-contact-btn">お問い合わせ</a></li>
+                <li><span style="font-weight: bold; font-size: 0.9rem;">JA</span> | <a href="about_en.html" style="margin-left: 5px; font-size: 0.9rem;">EN</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- 会社概要セクション -->
     <section class="about" style="padding-top: 140px;">
@@ -65,7 +82,7 @@
                     <div class="company-info-content">
                         <p class="company-info-item"><strong>代表：</strong>松本 和也</p>
                         <p class="company-info-item"><strong>設立：</strong>2025年6月5日</p>
-                        <p class="company-info-item company-origin-text">hobby（趣味）に、Vitality（活力）とVenture（冒険心）を。<br>「楽しみながら健康に」というビジョンを社名に込めました。</p>
+                        <p class="company-info-item company-origin-text"><strong>社名由来：</strong>hobby（趣味）に、Vitality（活力）とVenture（冒険心）を</p>
                     </div>
                 </div>
             </div>
@@ -95,5 +112,26 @@
             <p class="copyright">&copy; 2025 hovvy. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // ハンバーガーメニューの開閉
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // モバイルメニューのリンクをクリックしたらメニューを閉じる
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+
 </body>
 </html>

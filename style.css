@@ -605,7 +605,7 @@ nav .nav-contact-btn:hover {
 
 /* ビジョン：再構成 */
 .about-vision-vertical {
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
     padding: 30px 0;
 }
@@ -625,8 +625,7 @@ nav .nav-contact-btn:hover {
     content: '';
     position: absolute;
     bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 30px;
     height: 2px;
     background: var(--primary-color);
@@ -644,7 +643,7 @@ nav .nav-contact-btn:hover {
 /* 事業内容：縦並び */
 .about-services-vertical {
     padding: 30px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .services-label {
@@ -662,8 +661,7 @@ nav .nav-contact-btn:hover {
     content: '';
     position: absolute;
     bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 30px;
     height: 2px;
     background: var(--primary-color);
@@ -714,7 +712,7 @@ nav .nav-contact-btn:hover {
 /* 会社情報セクション */
 .about-company-info {
     padding: 30px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .company-info-label {
@@ -732,8 +730,7 @@ nav .nav-contact-btn:hover {
     content: '';
     position: absolute;
     bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 30px;
     height: 2px;
     background: var(--primary-color);
@@ -741,8 +738,8 @@ nav .nav-contact-btn:hover {
 
 .company-info-content {
     max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
 .company-info-item {
@@ -1086,7 +1083,7 @@ footer {
     .hero {
         flex-direction: column-reverse;
         height: auto;
-        padding: 100px 20px 40px;
+        padding: 120px 20px 40px;
         text-align: center;
         width: 100%;
         min-height: auto;
@@ -1195,7 +1192,7 @@ footer {
     .featured-app {
         flex-direction: column;
         padding: 0;
-        gap: 35px;
+        gap: 25px;
         margin-bottom: 0;
     }
 
@@ -1203,6 +1200,7 @@ footer {
         flex: 0 0 100%;
         max-width: 100%;
         width: 100%;
+        order: 2;
     }
 
     .featured-app-visual img {
@@ -1213,21 +1211,36 @@ footer {
     .featured-app-content {
         flex: 0 0 100%;
         max-width: 100%;
-        gap: 18px;
+        gap: 15px;
         text-align: left;
+        order: 1;
+    }
+
+    /* アプリアイコンとタイトルを横並び */
+    .featured-app-header {
+        display: flex !important;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
     }
 
     .featured-app-icon {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        margin: 0;
     }
 
     .featured-app-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin: 0;
+        flex: 1;
     }
 
+    /* ストアリンク */
     .store-links {
         gap: 12px;
+        margin-bottom: 15px;
     }
 
     .store-link img {
@@ -1235,9 +1248,11 @@ footer {
         width: 135px;
     }
 
+    /* 説明文 */
     .featured-app-description {
         font-size: 0.95rem;
         line-height: 1.7;
+        margin-bottom: 20px;
     }
 
     .featured-app-description .catchcopy {
@@ -1247,6 +1262,11 @@ footer {
     .other-apps-title {
         font-size: 1.5rem;
         margin-bottom: 30px;
+    }
+
+    /* アプリ紹介セクション */
+    .apps {
+        padding: 80px 0 60px;
     }
 
     /* Bentoグリッド */
@@ -1286,7 +1306,7 @@ footer {
 
     /* About Us - Vertical Modern Minimalist Design */
     .about {
-        padding: 60px 0;
+        padding: 80px 0 60px;
     }
 
     .about-header {
@@ -1357,7 +1377,7 @@ footer {
 
     /* プレスリリース */
     .press {
-        padding: 60px 0;
+        padding: 80px 0 60px;
     }
 
     .press-intro {
