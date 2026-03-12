@@ -1318,14 +1318,43 @@ footer {
         grid-column: span 1;
     }
 
+    /* スマホ表示：アイコンとアプリ名を横並び */
+    .bento-app-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0 15px;
+        align-items: start;
+    }
+    
+    .bento-app-icon {
+        grid-column: 1;
+        grid-row: 1;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
     .bento-app-card h3 {
+        grid-column: 2;
+        grid-row: 1;
         font-size: 1.2rem;
         line-height: 1.3;
+        margin: 0;
+        align-self: center;
     }
 
     .bento-app-card p {
+        grid-column: 1 / -1;
+        grid-row: 2;
         font-size: 0.9rem;
         line-height: 1.6;
+        margin-top: 15px;
+    }
+    
+    .bento-app-link {
+        grid-column: 1 / -1;
+        grid-row: 3;
     }
 
     /* スクリーンショット・機能グリッド */
