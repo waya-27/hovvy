@@ -1162,6 +1162,11 @@ footer {
         line-height: 1.6;
     }
 
+    /* ヒーローセクションのお問い合わせボタンを非表示 */
+    .cta-button-modern {
+        display: none;
+    }
+
     /* ヘッダー - モバイルレイアウト */
     header .container {
         flex-direction: row;
@@ -1408,6 +1413,11 @@ footer {
 
     .service-item-vertical p {
         font-size: 1rem;
+    }
+
+    /* AI & Data Analysisセクションをスマホで非表示 */
+    .data-analysis {
+        display: none;
     }
 
     /* プレスリリース */

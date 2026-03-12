@@ -66,11 +66,11 @@
                     <p class="services-label">SERVICES</p>
                     <div class="services-list">
                         <div class="service-item-vertical">
-                            <h5><span class="service-dot"></span>Digital Products</h5>
-                            <p>Planning and developing applications focused on hobbies, healthcare, and nursing care</p>
+                            <h5>Digital Products</h5>
+                            <p>Planning and development of apps focused on hobbies, healthcare, and caregiving.</p>
                         </div>
                         <div class="service-item-vertical">
-                            <h5><span class="service-dot"></span>Data Insights</h5>
+                            <h5>Data Insights</h5>
                             <p>Visualizing health risks using medical data and AI technology</p>
                         </div>
                     </div>
@@ -125,24 +125,27 @@
         </div>
     </footer>
     <script>
-        // Hamburger menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-            });
-
-            // Close menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuToggle.classList.remove('active');
-                    mobileMenu.classList.remove('active');
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
                 });
-            });
-        }
+
+                // Close menu when clicking a link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
     </script>
 
 </body>

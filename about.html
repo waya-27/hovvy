@@ -66,11 +66,11 @@
                     <p class="services-label">SERVICES</p>
                     <div class="services-list">
                         <div class="service-item-vertical">
-                            <h5><span class="service-dot"></span>Digital Products</h5>
+                            <h5>Digital Products</h5>
                             <p>趣味・ヘルスケア・介護をテーマにしたアプリの企画・開発</p>
                         </div>
                         <div class="service-item-vertical">
-                            <h5><span class="service-dot"></span>Data Insights</h5>
+                            <h5>Data Insights</h5>
                             <p>医療データとAI技術を用いて、健康リスクを可視化</p>
                         </div>
                     </div>
@@ -125,24 +125,27 @@
         </div>
     </footer>
     <script>
-        // ハンバーガーメニューの開閉
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-            });
-
-            // モバイルメニューのリンクをクリックしたらメニューを閉じる
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuToggle.classList.remove('active');
-                    mobileMenu.classList.remove('active');
+        // DOMの読み込み完了を待つ
+        document.addEventListener('DOMContentLoaded', function() {
+            // ハンバーガーメニューの開閉
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
                 });
-            });
-        }
+
+                // モバイルメニューのリンクをクリックしたらメニューを閉じる
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
     </script>
 
 </body>
