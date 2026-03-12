@@ -190,6 +190,7 @@ nav .nav-contact-btn:hover {
     text-align: center;
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
 }
 
 .mobile-menu nav ul li:last-child {
@@ -1045,12 +1046,21 @@ footer {
     text-align: center;
 }
 
-.footer-links {
+.footer-links-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
 }
 
 .footer-links a {
-    margin: 0 20px;
     opacity: 0.85;
     font-weight: 500;
     font-size: 0.95rem;
@@ -1064,9 +1074,7 @@ footer {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    gap: 15px;
 }
 
 .social-icon {
@@ -1546,16 +1554,24 @@ footer {
     }
 
     /* フッター */
+    .footer-links-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .footer-links {
-        display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     .footer-links a {
         font-size: 0.85rem;
+    }
+
+    .social-links {
+        gap: 15px;
     }
 
     .social-links {
