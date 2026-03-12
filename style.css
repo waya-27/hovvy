@@ -109,6 +109,24 @@ nav a:hover {
     color: var(--primary-color);
 }
 
+/* ナビゲーション内のお問い合わせボタン（オレンジ背景） */
+nav .nav-contact-btn {
+    padding: 8px 20px;
+    background: linear-gradient(45deg, var(--primary-color), #ff8f00);
+    color: var(--white) !important;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.25);
+    transition: var(--transition);
+}
+
+nav .nav-contact-btn:hover {
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.35);
+}
+
 /* ヒーローセクション */
 .hero {
     height: 90vh;
