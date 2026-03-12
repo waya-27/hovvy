@@ -757,6 +757,45 @@ nav .nav-contact-btn:hover {
     margin-top: 25px;
 }
 
+/* 代表者SNSリンク */
+.representative-social-links {
+    display: inline-flex;
+    gap: 8px;
+    margin-left: 12px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.representative-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 102, 0, 0.1);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.representative-icon:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.representative-icon svg,
+.representative-icon img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.representative-icon img {
+    border-radius: 4px;
+}
+
 /* 旧デザインのスタイルを無効化 */
 .about-divider,
 .about-vision,
