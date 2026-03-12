@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ウェブサイトをリニューアルしました - hovvy</title>
+    <title>会社概要 - hovvy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,32 +13,55 @@
     <!-- ヘッダー -->
     <header>
         <div class="container">
-            <a href="index.html" class="logo">hovvy</a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/hovvy.png" alt="hovvy" style="height: 40px; width: auto;">
+                </a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html#apps">アプリ紹介</a></li>
                     <li><a href="about.html">会社概要</a></li>
                     <li><a href="index.html#press">プレスリリース</a></li>
-                    <li><a href="press_release_20260312_en.html">EN</a></li>
+                    <li><span style="font-weight: bold; font-size: 0.9rem;">JA</span> | <a href="about_en.html" style="margin-left: 5px; font-size: 0.9rem;">EN</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- プレスリリース詳細 -->
-    <section class="press-detail">
+    <!-- 会社概要セクション -->
+    <section class="about" style="padding-top: 140px;">
         <div class="container">
-            <div class="press-detail-content">
-                <p class="press-detail-date">2026.03.12</p>
-                <h1 class="press-detail-title">ウェブサイトをリニューアルしました</h1>
-                
-                <div class="press-detail-body">
-                    <p>平素は格別のお引き立てを賜り誠にありがとうございます。</p>
-                    <p>hovvyはこの度webサイトを全面リニューアルいたしました。</p>
-                    <p>今後ともhovvyをよろしくお願い申し上げます。</p>
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <!-- ヘッダーエリア：ロゴ・由来・代表者 -->
+                <div class="about-header">
+                    <img src="images/hovvy.png" alt="hovvy" class="company-logo">
+                    <p class="company-origin">hobby（趣味）に、Vitality（活力）とVenture（冒険心）を。<br>「楽しみながら健康に」というビジョンを社名に込めました。</p>
+                    <p class="representative">代表：松本 和也</p>
+                    <p class="representative" style="margin-top: 10px;">設立日：2025年6月5日</p>
                 </div>
-
-                <a href="index.html#press" class="back-to-list">← プレスリリース一覧に戻る</a>
+                
+                <!-- ビジョン：再構成 -->
+                <div class="about-vision-vertical">
+                    <p class="vision-label">VISION</p>
+                    <h3 class="vision-message">楽しみながら健康に</h3>
+                </div>
+                
+                <!-- 事業内容：縦並び -->
+                <div class="about-services-vertical">
+                    <p class="services-label">SERVICES</p>
+                    <div class="services-list">
+                        <div class="service-item-vertical">
+                            <h5><span class="service-dot"></span>Digital Products</h5>
+                            <p>趣味・ヘルスケア・介護をテーマにしたアプリの企画・開発</p>
+                        </div>
+                        <div class="service-item-vertical">
+                            <h5><span class="service-dot"></span>Data Insights</h5>
+                            <p>医療データとAI技術を用いて、健康リスクの可視化と具体的な解決策の提供</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -59,7 +82,7 @@
                 </a>
                 <a href="https://note.com/kenkou_hobby" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="note">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.5 3h11c.8 0 1.5.7 1.5 1.5v15c0 .8-.7 1.5-1.5 1.5h-11c-.8 0-1.5-.7-1.5-1.5v-15c0-.8.7-1.5 1.5-1.5zm2 3v12h7V6h-7zm-6 0v12h4V6h-4z"/>
+                        <path d="M8.5 3h11c.8 0 1.5.7 1.5 1.5v15c0 .8-.7 1.5-1.5 1.5h-11c-.8 0-1.5-.7-1.5-1.5v-15c0-.8.7-1.5 1.5-1.5zm9.5 3h-7v2h7V6zm0 4h-7v2h7v-2zm0 4h-7v2h7v-2zM4 6c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1 .6 0 1-.4 1-1V7c0-.6-.4-1-1-1z"/>
                     </svg>
                 </a>
             </div>
