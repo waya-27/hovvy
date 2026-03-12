@@ -1164,7 +1164,7 @@ footer {
 
     /* ヒーローセクションのお問い合わせボタンを非表示 */
     .cta-button-modern {
-        display: none;
+        display: none !important;
     }
 
     /* ヘッダー - モバイルレイアウト */
