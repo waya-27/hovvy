@@ -150,18 +150,22 @@
                 gap: 30px;
             }
             
-            .feature-row.reverse .feature-visual,
-            .feature-row.reverse .feature-content {
-                order: initial;
-            }
-            
-            /* スマホでは説明文を上、スクリーンショットを下に */
+            /* スマホでは全て同じ順序：説明文を上、スクリーンショットを下 */
             .feature-content {
                 order: 1;
             }
             
             .feature-visual {
                 order: 2;
+            }
+            
+            /* reverseクラスでもorderを維持 */
+            .feature-row.reverse .feature-visual {
+                order: 2;
+            }
+            
+            .feature-row.reverse .feature-content {
+                order: 1;
             }
             
             .phone-mockup {
