@@ -203,6 +203,10 @@ nav .nav-contact-btn:hover {
     color: #333;
 }
 
+.mobile-menu nav ul li:last-child a {
+    display: inline;
+}
+
 .mobile-menu nav .nav-contact-btn {
     display: inline-block;
     margin: 10px 0;
@@ -1042,7 +1046,7 @@ nav .nav-contact-btn:hover {
 footer {
     background: linear-gradient(135deg, #ff6600 0%, #ff7a1f 100%);
     color: var(--white);
-    padding: 30px 0 15px;
+    padding: 20px 0 10px;
     text-align: center;
 }
 
@@ -1051,7 +1055,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
 }
 
@@ -1103,8 +1107,8 @@ footer {
     opacity: 0.7;
     font-size: 0.85rem;
     border-top: 1px solid rgba(255,255,255,0.15);
-    padding-top: 12px;
-    margin-top: 12px;
+    padding-top: 8px;
+    margin-top: 8px;
     font-weight: 400;
 }
 
