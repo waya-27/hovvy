@@ -974,9 +974,9 @@ nav .nav-contact-btn:hover {
 
 /* ニュース記事 2カラムレイアウト */
 .press-detail-content {
-    max-width: 860px;
+    max-width: 1290px;
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr 390px;
     grid-template-areas:
         "date       date"
         "title      title"
@@ -1545,20 +1545,12 @@ footer {
         grid-template-areas:
             "date"
             "title"
-            "screenshot"
             "body"
             "back-link";
     }
 
     .news-screenshot {
-        text-align: center;
-    }
-
-    .news-screenshot img {
-        position: static;
-        max-width: 260px;
-        margin: 0 auto;
-        margin-bottom: 24px;
+        display: none;
     }
 
     .press-detail-title {
