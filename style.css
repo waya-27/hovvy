@@ -925,7 +925,7 @@ nav .nav-contact-btn:hover {
 }
 
 .press-detail-title {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 40px;
@@ -976,7 +976,7 @@ nav .nav-contact-btn:hover {
 .press-detail-content {
     max-width: 1290px;
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 260px;
     grid-template-areas:
         "date       date"
         "title      title"
@@ -997,7 +997,16 @@ nav .nav-contact-btn:hover {
 
 .press-detail-date  { grid-area: date; }
 .press-detail-title { grid-area: title; }
-.press-detail-intro { grid-area: intro; }
+.press-detail-intro {
+    grid-area: intro;
+    margin-bottom: 40px;
+}
+.press-detail-intro p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 1.5em;
+}
 .press-detail-body  { grid-area: body; margin-bottom: 40px; }
 .back-to-list       { grid-area: back-link; }
 
