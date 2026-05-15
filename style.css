@@ -976,10 +976,11 @@ nav .nav-contact-btn:hover {
 .press-detail-content {
     max-width: 1290px;
     display: grid;
-    grid-template-columns: 1fr 390px;
+    grid-template-columns: 1fr 200px;
     grid-template-areas:
         "date       date"
         "title      title"
+        "intro      intro"
         "body       body"
         "back-link  back-link";
     column-gap: 40px;
@@ -989,12 +990,14 @@ nav .nav-contact-btn:hover {
     grid-template-areas:
         "date       date"
         "title      title"
+        "intro      intro"
         "body       screenshot"
         "back-link  back-link";
 }
 
 .press-detail-date  { grid-area: date; }
 .press-detail-title { grid-area: title; }
+.press-detail-intro { grid-area: intro; }
 .press-detail-body  { grid-area: body; margin-bottom: 40px; }
 .back-to-list       { grid-area: back-link; }
 
