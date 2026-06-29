@@ -513,9 +513,13 @@ nav .nav-contact-btn:hover {
 }
 
 .analysis-block + .analysis-block {
-    margin-top: 80px;
-    padding-top: 80px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 60px;
+    padding-top: 0;
+    border-top: none;
+}
+
+.data-analysis > .container > .section-title {
+    margin-bottom: 3rem;
 }
 
 .analysis-content {
@@ -1625,12 +1629,10 @@ footer {
 
     /* データ分析セクション */
     .analysis-block + .analysis-block {
-        margin-top: 50px;
-        padding-top: 50px;
+        margin-top: 40px;
     }
 
-    .analysis-content,
-    .analysis-content-reverse {
+    .analysis-content {
         flex-direction: column;
     }
 
