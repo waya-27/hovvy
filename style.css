@@ -994,19 +994,22 @@ nav .nav-contact-btn:hover {
 
 /* ニュース記事 2カラムレイアウト */
 .press-detail-content {
-    max-width: 1290px;
+    max-width: 860px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "date       date"
-        "title      title"
-        "intro      intro"
-        "body       body"
-        "back-link  back-link";
-    column-gap: 40px;
+        "date"
+        "title"
+        "intro"
+        "body"
+        "back-link";
 }
 
 .press-detail-content:has(.news-screenshot) {
+    max-width: 1290px;
+    grid-template-columns: 1fr 260px;
+    column-gap: 40px;
     grid-template-areas:
         "date       date"
         "title      title"
@@ -1014,6 +1017,7 @@ nav .nav-contact-btn:hover {
         "body       screenshot"
         "back-link  back-link";
 }
+
 
 .press-detail-date  { grid-area: date; }
 .press-detail-title { grid-area: title; }

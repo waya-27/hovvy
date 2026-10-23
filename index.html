@@ -6,7 +6,33 @@
     <title>hovvy</title>
     <meta name="description" content="hovvyはデータ分析技術と革新的なアプリケーション開発で、より良い体験を提供します。">
     <link rel="icon" href="images/hovvy.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="style.css?v=20261023_4col">
+    <style>
+    .bento-grid-apps {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 20px !important;
+    }
+    @media (max-width: 1024px) {
+        .bento-grid-apps {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    @media (max-width: 576px) {
+        .bento-grid-apps {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    .bento-app-card-discontinued {
+        cursor: default !important;
+        opacity: 0.85;
+    }
+    .bento-app-card-discontinued:hover {
+        transform: none !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    </style>
     <!-- Google Fonts - Inter for modern tech feel -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
@@ -54,7 +80,6 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="apps.html">アプリ紹介</a></li>
                     <li><a href="about.html">会社概要</a></li>
                     <li><a href="contact.html" class="nav-contact-btn">お問い合わせ</a></li>
                     <li><span style="font-weight: bold; font-size: 0.9rem;">JA</span> | <a href="index_en.html" style="margin-left: 5px; font-size: 0.9rem;">EN</a></li>
@@ -67,7 +92,6 @@
     <div class="mobile-menu">
         <nav>
             <ul>
-                <li><a href="apps.html">アプリ紹介</a></li>
                 <li><a href="about.html">会社概要</a></li>
                 <li><a href="contact.html" class="nav-contact-btn">お問い合わせ</a></li>
                 <li><span style="white-space: nowrap;"><span style="font-weight: bold; font-size: 0.9rem;">JA</span> | <a href="index_en.html" style="margin-left: 5px; font-size: 0.9rem;">EN</a></span></li>
@@ -194,116 +218,104 @@
             <h3 class="apps-sub-title">Mobile Apps</h3>
             <div class="bento-grid-apps">
                 <!-- ParallelCook -->
-                <a href="apps.html#parallel-cook" class="bento-app-card">
+                <a href="https://play.google.com/store/apps/details?id=com.parallelcook" target="_blank" rel="noopener noreferrer" class="bento-app-card">
                     <div class="bento-app-icon">
                         <img src="images/parallelcook_icon.png" alt="ParallelCook">
                     </div>
                     <h3>ParallelCook</h3>
                     <p>並行調理をサポートするレシピ管理アプリ。<br>料理が苦手な方でも迷わないよう、AIが効率的な手順をナビゲート。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
+                    <span class="bento-app-link">Play Storeを開く ↗</span>
                 </a>
                 <!-- NiceShot Log -->
-                <a href="apps.html#nice-shot-log" class="bento-app-card">
+                <a href="https://play.google.com/store/apps/details?id=com.niceshotlog&hl=ja" target="_blank" rel="noopener noreferrer" class="bento-app-card">
                     <div class="bento-app-icon">
                         <img src="images/golf_icon.png" alt="NiceShot Log">
                     </div>
                     <h3>NiceShot Log</h3>
                     <p>ゴルフの練習記録をデータ化。<br>スコアアップのための課題発見と成長を可視化。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
+                    <span class="bento-app-link">Play Storeを開く ↗</span>
                 </a>
                 <!-- Atom-Q -->
-                <a href="apps.html#atom-q" class="bento-app-card">
+                <a href="https://play.google.com/store/apps/details?id=com.atomq" target="_blank" rel="noopener noreferrer" class="bento-app-card">
                     <div class="bento-app-icon">
                         <img src="images/atomq_icon.png" alt="Atom-Q">
                     </div>
                     <h3>Atom-Q</h3>
                     <p>化学結合をパズル感覚で学べる教育アプリ。<br>原子を組み合わせて化学の基礎を直感的に身につける。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
+                    <span class="bento-app-link">Play Storeを開く ↗</span>
                 </a>
                 <!-- 毎日脳トレ -->
-                <a href="apps.html#noutore" class="bento-app-card">
+                <a href="https://play.google.com/store/apps/details?id=com.hovvy.noutore" target="_blank" rel="noopener noreferrer" class="bento-app-card">
                     <div class="bento-app-icon">
                         <img src="images/brain_icon.png" alt="毎日脳トレ">
                     </div>
                     <h3>毎日脳トレ</h3>
                     <p>脳の部位ごとに鍛える計算型脳トレ。<br>認知機能の維持・向上を毎日の計算トレーニングでサポート。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
+                    <span class="bento-app-link">Play Storeを開く ↗</span>
                 </a>
                 <!-- シュミのしるし -->
-                <a href="apps.html#shumi-no-shirushi" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #eff6ff; color: #2563eb; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">リニューアル準備中</span>
                     <div class="bento-app-icon">
                         <img src="images/shumi_icon.png" alt="シュミのしるし">
                     </div>
                     <h3>シュミのしるし</h3>
                     <p>ゆるく繋がり、日常を「習慣」に変える。<br>非公開で趣味仲間の人数を知り、モチベーションを高めるライフログアプリ。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- Short Block -->
-                <a href="apps.html#short-block" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">配信終了</span>
                     <div class="bento-app-icon">
                         <img src="images/short_icon.png" alt="Short Block">
                     </div>
                     <h3>Short Block</h3>
                     <p>ショート動画の過度な視聴を防ぐ。<br>画面の段階的暗転で無意識の無限スクロールから抜け出し、大切な時間を取り戻す。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- のびしろ -->
-                <a href="apps.html#nobishiro" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">配信終了</span>
                     <div class="bento-app-icon">
                         <img src="images/Nobishiro_icon.png" alt="のびしろ">
                     </div>
                     <h3>のびしろ</h3>
                     <p>才能を、数値化せよ。<br>感覚に頼る練習を卒業し、データに基づいた上達を実現する実力管理ツール。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- Un-AI -->
-                <a href="apps.html#un-ai" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">配信終了</span>
                     <div class="bento-app-icon">
                         <img src="images/unai_icon.png" alt="Un-AI">
                     </div>
                     <h3>Un-AI</h3>
                     <p>AIに頼らない、自分だけの集中時間を。<br>AI/SNSアプリ検知で集中を守るフォーカスサポートアプリ。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- Arealist -->
-                <a href="apps.html#arealist" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">配信終了</span>
                     <div class="bento-app-icon">
                         <img src="images/arealist_icon.png" alt="Arealist">
                     </div>
                     <h3>Arealist</h3>
                     <p>「面積」を記録する新感覚アプリ。<br>日々のランニングや散歩にスパイスを与えます。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- あれあった？ -->
-                <a href="apps.html#areatta" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">配信終了</span>
                     <div class="bento-app-icon">
                         <img src="images/areatta_icon.png" alt="あれあった？">
                     </div>
                     <h3>あれあった？</h3>
                     <p>「あれ、あったっけ？」をなくす。<br>調味料や食材の在庫状況をスマートに管理。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
                 <!-- Prompt Beacon -->
-                <a href="apps.html#prompt-beacon" class="bento-app-card">
+                <div class="bento-app-card bento-app-card-discontinued">
                     <span style="position: absolute; top: 12px; right: 12px; background: #e5e7eb; color: #4b5563; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">公開終了</span>
                     <div class="bento-app-icon">
                         <img src="images/beacon_icon.png" alt="Prompt Beacon">
                     </div>
                     <h3>Prompt Beacon</h3>
                     <p>AIへの指示をすべて手元に記録。<br>ChatGPT・Claude・Cursor など20以上のツールに対応する、完全オフラインのプロンプトログツール。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
-            </div>
-                    <h3>あれあった？</h3>
-                    <p>「あれ、あったっけ？」をなくす。<br>調味料や食材の在庫状況をスマートに管理。</p>
-                    <span class="bento-app-link">詳細を見る →</span>
-                </a>
+                </div>
             </div>
         </div>
     </section>
