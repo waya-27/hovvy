@@ -6,12 +6,40 @@
     <title>hovvy</title>
     <meta name="description" content="hovvy provides better experiences through data analysis technology and innovative application development.">
     <link rel="icon" href="images/hovvy.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=20261023_4col">
+    <link rel="stylesheet" href="style.css?v=20261023_v5">
     <style>
     .bento-grid-apps {
         display: grid !important;
         grid-template-columns: repeat(4, 1fr) !important;
         gap: 20px !important;
+    }
+    .bento-app-card {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .bento-app-card p {
+        flex: 1 !important;
+    }
+    .bento-app-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .bento-app-link {
+        font-size: 0.85rem !important;
+        font-weight: 600 !important;
+        color: var(--primary-color, #ff6600) !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        transition: transform 0.2s ease !important;
+        margin-top: 0 !important;
+    }
+    .bento-app-card:hover .bento-app-link {
+        transform: translateX(4px);
     }
     @media (max-width: 1024px) {
         .bento-grid-apps {
@@ -226,7 +254,9 @@
                     </div>
                     <h3>ParallelCook</h3>
                     <p>Recipe management app supporting parallel cooking.<br>AI navigates efficient steps so even cooking beginners won't get lost.</p>
-                    <span class="bento-app-link">Open on Play Store ↗</span>
+                    <div class="bento-app-footer">
+                        <span class="bento-app-link">Open on Play Store ↗</span>
+                    </div>
                 </a>
                 <!-- NiceShot Log -->
                 <a href="https://play.google.com/store/apps/details?id=com.niceshotlog&hl=ja" target="_blank" rel="noopener noreferrer" class="bento-app-card reveal-on-scroll">
@@ -235,7 +265,9 @@
                     </div>
                     <h3>NiceShot Log</h3>
                     <p>Digitize your golf practice records.<br>A tracker that visualizes growth and helps identify issues for score improvement.</p>
-                    <span class="bento-app-link">Open on Play Store ↗</span>
+                    <div class="bento-app-footer">
+                        <span class="bento-app-link">Open on Play Store ↗</span>
+                    </div>
                 </a>
                 <!-- Atom-Q -->
                 <a href="https://play.google.com/store/apps/details?id=com.atomq" target="_blank" rel="noopener noreferrer" class="bento-app-card reveal-on-scroll">
@@ -244,7 +276,9 @@
                     </div>
                     <h3>Atom-Q</h3>
                     <p>An educational puzzle app for learning chemical bonds.<br>Combine atoms intuitively to master chemistry fundamentals.</p>
-                    <span class="bento-app-link">Open on Play Store ↗</span>
+                    <div class="bento-app-footer">
+                        <span class="bento-app-link">Open on Play Store ↗</span>
+                    </div>
                 </a>
                 <!-- Daily Brain Training -->
                 <a href="https://play.google.com/store/apps/details?id=com.hovvy.noutore" target="_blank" rel="noopener noreferrer" class="bento-app-card reveal-on-scroll">
@@ -253,7 +287,9 @@
                     </div>
                     <h3>Daily Brain Training</h3>
                     <p>Math-based brain training targeting specific brain regions.<br>Support cognitive maintenance and improvement through daily exercises.</p>
-                    <span class="bento-app-link">Open on Play Store ↗</span>
+                    <div class="bento-app-footer">
+                        <span class="bento-app-link">Open on Play Store ↗</span>
+                    </div>
                 </a>
                 <!-- hobby ripple -->
                 <div class="bento-app-card bento-app-card-discontinued reveal-on-scroll">
@@ -322,41 +358,6 @@
         </div>
     </section>
 
-    <!-- AI & Data Analysis Section -->
-    <section id="data" class="data-analysis">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">AI Orchestration & Data Analysis</h2>
-            <div class="analysis-block">
-                <div class="analysis-content">
-                    <div class="analysis-image reveal-on-scroll">
-                        <img src="images/Orchestra.png" alt="AI Orchestration & Automation">
-                    </div>
-                    <div class="analysis-text reveal-on-scroll">
-                        <h3>Automate daily operations<br>with AI orchestration</h3>
-                        <ul>
-                            <li>Building integrated workflows connecting AI models</li>
-                            <li>Autonomous task automation for judgment-based routine work</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="analysis-block">
-                <div class="analysis-content">
-                    <div class="analysis-image reveal-on-scroll">
-                        <img src="images/ai_image.png" alt="Medical Data Analysis">
-                    </div>
-                    <div class="analysis-text reveal-on-scroll">
-                        <h3>Discover organizational health risks<br>through medical data analysis</h3>
-                        <ul>
-                            <li>Advanced integrated analysis of health checkups and receipt data</li>
-                            <li>Construction of intuitive health dashboards</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -366,11 +367,6 @@
                     <a href="contact_en.html">Contact</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.youtube.com/channel/UCc1skqkjLZN0fD3vr2pAC3g" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
-                        </svg>
-                    </a>
                     <a href="https://www.instagram.com/hovvy_global/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>

@@ -2413,3 +2413,13 @@ footer {
     }
 }
 
+
+/* App card footer matching web service card footer */
+.bento-app-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
