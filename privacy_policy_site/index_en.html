@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hovvy apps - Policies & Terms</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <!-- Base on hovvy style -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Additional styles */
+        body {
+            padding-top: 80px; /* For fixed header */
+            background-color: var(--light-bg);
+        }
+        
+        .page-header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .policy-list {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .policy-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 30px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s;
+        }
+
+        .policy-item:last-child {
+            border-bottom: none;
+        }
+
+        .policy-item:hover {
+            background-color: #fafafa;
+        }
+
+        .app-info-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .app-icon-small {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        .app-name-row {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .policy-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .policy-link {
+            font-size: 0.9rem;
+            color: #666;
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            transition: all 0.2s;
+        }
+
+        .policy-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .policy-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .policy-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSWT4WN814"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RSWT4WN814');
+    </script>
+</head>
+<body>
+
+    <!-- Header (Same as hovvy) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index_en.html" style="display:flex; align-items:center;">
+                    <img src="../images/hovvy.png" alt="hovvy" style="height: 40px; width: auto;">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../apps_en.html">Apps</a></li>
+                    <li><a href="../about_en.html">About Us</a></li>
+                    <li><a href="../contact_en.html" class="nav-contact-btn">Contact</a></li>
+                    <li><a href="index.html" style="margin-left: 10px; font-size: 0.9rem;">JA</a> | <span style="font-weight: bold; font-size: 0.9rem;">EN</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1 class="section-title" style="margin-bottom: 1rem;">Policies & Terms</h1>
+        <p style="color: #666;">Privacy policies and terms of service for each app</p>
+    </div>
+
+    <div class="privacy-container">
+        <div class="policy-list">
+            
+            <!-- hobby ripple -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/shumi_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">hobby ripple</span>
+                </div>
+                <div class="policy-links">
+                    <a href="shumi/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="shumi/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Areatta? -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/areatta_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Areatta?</span>
+                </div>
+                <div class="policy-links">
+                    <a href="areatta/privacy.html" class="policy-link">Privacy</a>
+                    <a href="areatta/terms.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- NiceShot Log -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/golf_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">NiceShot Log</span>
+                </div>
+                <div class="policy-links">
+                    <a href="golf/privacy.html" class="policy-link">Privacy</a>
+                    <a href="golf/terms.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Arealist -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/arealist_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Arealist</span>
+                </div>
+                <div class="policy-links">
+                    <a href="arealist/privacy.html" class="policy-link">Privacy</a>
+                    <a href="arealist/terms.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Nobishiro -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/nobishiro_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Nobishiro</span>
+                </div>
+                <div class="policy-links">
+                    <a href="nobishiro/privacy.html" class="policy-link">Privacy</a>
+                    <a href="nobishiro/terms.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- ParallelCook -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/parallelcook_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">ParallelCook</span>
+                </div>
+                <div class="policy-links">
+                    <a href="parallelcook/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="parallelcook/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Un-AI -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/unai_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Un-AI</span>
+                </div>
+                <div class="policy-links">
+                    <a href="unai/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="unai/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Atom-Q -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/atomq_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Atom-Q</span>
+                </div>
+                <div class="policy-links">
+                    <a href="atomq/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="atomq/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Prompt Beacon -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/beacon_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Prompt Beacon</span>
+                </div>
+                <div class="policy-links">
+                    <a href="beacon/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="beacon/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Brain Training -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/brain_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Brain Training: Brain Region Training</span>
+                </div>
+                <div class="policy-links">
+                    <a href="brain/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="brain/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+
+            <!-- Short Block -->
+            <div class="policy-item">
+                <div class="app-info-row">
+                    <img src="assets/images/short_icon.png" alt="icon" class="app-icon-small">
+                    <span class="app-name-row">Short Block</span>
+                </div>
+                <div class="policy-links">
+                    <a href="short-block/privacy_en.html" class="policy-link">Privacy</a>
+                    <a href="short-block/terms_en.html" class="policy-link">Terms</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+           <a href="support_en.html" class="cta-button" style="background-color: var(--primary-color); color: var(--white); border: 2px solid var(--primary-color);">
+             🛠️ Support
+           </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links-row">
+                <div class="footer-links">
+                    <a href="index_en.html">Privacy Policy</a>
+                    <a href="../contact_en.html">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hovvy_global/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://note.com/kenkou_hobby" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="note">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.5 3h11c.8 0 1.5.7 1.5 1.5v15c0 .8-.7 1.5-1.5 1.5h-11c-.8 0-1.5-.7-1.5-1.5v-15c0-.8.7-1.5 1.5-1.5zm9.5 3h-7v2h7V6zm0 4h-7v2h7v-2zm0 4h-7v2h7v-2zM4 6c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1 .6 0 1-.4 1-1V7c0-.6-.4-1-1-1z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 hovvy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
