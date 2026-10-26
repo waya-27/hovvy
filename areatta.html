@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>縺ゅｌ縺ゅ▲縺滂ｼ・- 鬟滓攝縺ｨ雋ｷ縺・黄縺ｮ繧ｹ繝槭・繝医Γ繝｢繧｢繝励Μ | hovvy</title>
-    <meta name="description" content="螳ｶ縺ｫ縺ゅｋ繧ゅ・縲∝ｿ・ｦ√↑繧ゅ・繧剃ｸ逶ｮ縺ｧ邂｡逅・ＪPhone繧Бndroid縺ｮ繝帙・繝逕ｻ髱｢縺ｫ霑ｽ蜉縺励※繧｢繝励Μ縺ｨ縺励※菴ｿ縺医ｋ繧ｹ繝槭・繝磯｣滓攝繝｡繝｢縲後≠繧後≠縺｣縺滂ｼ溘阪ょｮ悟・辟｡譁吶・蠎・相縺ｪ縺励・>
+    <title>あれあった？ - 食材と買い物のスマートメモアプリ | hovvy</title>
+    <meta name="description" content="家にあるもの、必要なものを一目で管理。iPhoneやAndroidのホーム画面に追加してアプリとして使えるスマート食材メモ「あれあった？」。完全無料・広告なし。">
     <link rel="icon" href="images/hovvy.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -132,16 +132,21 @@
 
         .feature-card {
             background: white;
-            border: 1px solid #eee;
-            border-radius: 16px;
-            padding: 28px 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f1f3f5;
+            border-radius: 20px;
+            padding: 32px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(233, 30, 99, 0.08);
         }
 
         .feature-card-icon {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 16px;
-            display: inline-block;
         }
 
         .feature-card h3 {
@@ -152,119 +157,113 @@
         }
 
         .feature-card p {
-            font-size: 0.95rem;
             color: #666;
+            font-size: 0.95rem;
             line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #E91E63;
         }
 
         @media (max-width: 900px) {
             .hero-container {
                 grid-template-columns: 1fr;
-                text-align: center;
                 gap: 40px;
+                text-align: center;
             }
             .hero-catchcopy {
                 font-size: 2.4rem;
             }
+            .launch-box {
+                max-width: 100%;
+            }
             .feature-grid {
                 grid-template-columns: 1fr;
             }
-            .launch-box {
-                margin: 0 auto;
-            }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSWT4WN814"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RSWT4WN814');
-    </script>
 </head>
 <body>
 
-    <!-- 繝倥ャ繝繝ｼ -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/hovvy.png" alt="hovvy" style="height: 40px; width: auto;">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">莨夂､ｾ讎りｦ・/a></li>
-                    <li><a href="contact.html" class="nav-contact-btn">縺雁撫縺・粋繧上○</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- 繝偵・繝ｭ繝ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ -->
+    <!-- ヒーローセクション -->
     <section class="app-hero-showcase">
         <div class="hero-container">
-            <div class="hero-text">
-                <h1 class="hero-catchcopy">雋ｷ縺・ｿ倥ｌ繧偵ぞ繝ｭ縺ｫ縲・br><span>縲後≠繧後≠縺｣縺滂ｼ溘・/span></h1>
+            <div class="hero-text-content">
+                <div style="display: inline-block; background: #FCE4EC; color: #C2185B; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 16px;">
+                    ✨ Web / iPhone & Android 対応 (PWA)
+                </div>
+                <h1 class="hero-catchcopy">
+                    「あれ、あったっけ？」を<br>今日から<span>ゼロ</span>に。
+                </h1>
                 <p class="hero-subcopy">
-                    鬟滓攝繧・律逕ｨ蜩√・縲悟惠蠎ｫ縺ゅｊ繝ｻ雋ｷ縺・ｂ縺ｮ縲阪ｒ荳逶ｮ縺ｧ繝｡繝｢縲・br>
-                    iPhone繧Бndroid縺ｮ繝帙・繝逕ｻ髱｢縺ｫ霑ｽ蜉縺励※縲・壼ｸｸ縺ｮ繧｢繝励Μ縺ｨ縺励※縺吶＄縺ｫ縺贋ｽｿ縺・＞縺溘□縺代∪縺吶・                </p>
+                    冷蔵庫のストックも、今日買うものも、ワンタップでスマート管理。<br>
+                    iPhoneやAndroidのホーム画面に追加して、通常のアプリとしてすぐにお使いいただけます。
+                </p>
                 <div class="launch-box">
                     <a href="areatta_app/" class="launch-btn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                             <line x1="12" y1="18" x2="12.01" y2="18"></line>
                         </svg>
-                        縲後≠繧後≠縺｣縺滂ｼ溘阪ｒ髢九￥
+                        「あれあった？」を開く
                     </a>
                     <div class="pwa-instruction">
-                        <strong>導 iPhone・・afari・峨〒繧｢繝励Μ繧｢繧､繧ｳ繝ｳ繧堤ｽｮ縺乗婿豕包ｼ・/strong><br>
-                        1. 荳翫・繝懊ち繝ｳ縺九ｉ繧｢繝励Μ繧帝幕縺・br>
-                        2. 逕ｻ髱｢荳九・蜈ｱ譛峨・繧ｿ繝ｳ・・svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -2px;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>・峨ｒ繧ｿ繝・・<br>
-                        3. <strong>縲後・繝ｼ繝逕ｻ髱｢縺ｫ霑ｽ蜉縲・/strong> 繧帝∈謚・br>
-                        窶ｻ繝帙・繝逕ｻ髱｢縺九ｉ蜈ｨ逕ｻ髱｢繧｢繝励Μ縺ｨ縺励※蜊ｳ蠎ｧ縺ｫ襍ｷ蜍輔〒縺阪∪縺吶・                    </div>
+                        <strong>📱 iPhone（Safari）でアプリとして使う方法：</strong><br>
+                        1. 上のボタンからアプリを開く<br>
+                        2. 画面下の共有ボタン（<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -2px;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>）をタップ<br>
+                        3. <strong>「ホーム画面に追加」</strong> を選択<br>
+                        ※ホーム画面から全画面アプリとして即座に起動できます。
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="images/areatta_icon.png" alt="縺ゅｌ縺ゅ▲縺・繧｢繧､繧ｳ繝ｳ" class="app-icon-large">
-                <h2 style="font-size: 1.8rem; font-weight: 800; color: #222;">縺ゅｌ縺ゅ▲縺滂ｼ・/h2>
+                <img src="images/areatta_icon.png" alt="あれあった？ アイコン" class="app-icon-large">
+                <h2 style="font-size: 1.8rem; font-weight: 800; color: #222;">あれあった？</h2>
                 <p style="color: #777; font-size: 0.95rem; margin-top: 4px;">Smart Stock & Shopping Memo</p>
             </div>
         </div>
     </section>
 
-    <!-- 讖溯・迚ｹ髟ｷ -->
+    <!-- 機能特長 -->
     <section class="features-section">
-        <h2 style="text-align: center; font-size: 2rem; font-weight: 800; color: #1a1a1a;">荳ｻ縺ｪ迚ｹ蠕ｴ</h2>
+        <h2 style="text-align: center; font-size: 2rem; font-weight: 800; color: #1a1a1a;">主な特徴</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <div class="feature-card-icon">將</div>
-                <h3>繝ｯ繝ｳ繧ｿ繝・・縺ｧ迥ｶ諷句・譖ｿ</h3>
-                <p>繧ｫ繝ｼ繝峨ｒ繧ｿ繝・・縺吶ｋ縺縺代〒縲瑚ｲｷ縺・ｂ縺ｮ・芋泝抵ｼ峨阪→縲悟惠蠎ｫ縺ゅｊ・亥・阡ｵ蠎ｫ繝槭・繧ｯ・峨阪ｒ迸ｬ譎ゅ↓蛻・ｊ譖ｿ縺医る聞謚ｼ縺励〒蜷榊燕邱ｨ髮・ｂ陦後∴縺ｾ縺吶・/p>
+                <div class="feature-card-icon">🛒</div>
+                <h3>ワンタップで状態切替</h3>
+                <p>カードをタップするだけで、「買うもの（🛒）」と「在庫あり（冷蔵庫マーク）」を瞬時に切り替え。長押しで名前編集も行えます。</p>
             </div>
             <div class="feature-card">
-                <div class="feature-card-icon">宵</div>
-                <h3>雋ｷ縺・黄繝｢繝ｼ繝峨〒荳諡ｬ螳御ｺ・/h3>
-                <p>繧ｹ繝ｼ繝代・縺ｧ縺ｯ縲瑚ｲｷ縺・黄繝｢繝ｼ繝峨阪↓蛻・ｊ譖ｿ縺医ゅき繧ｴ縺ｫ蜈･繧後◆繧｢繧､繝・Β繧偵メ繧ｧ繝・け縺励√瑚ｲｷ縺・黄邨ゆｺ・阪〒荳諡ｬ縺励※縲悟惠蠎ｫ縺ゅｊ縲阪∈譖ｴ譁ｰ・・・蜍輔た繝ｼ繝医＆繧後∪縺吶・/p>
+                <div class="feature-card-icon">🛍️</div>
+                <h3>買い物モードで一括完了</h3>
+                <p>スーパーでは「買い物モード」に切り替え。カゴに入れたアイテムをチェックし、「買い物終了」で一括して「在庫あり」へ更新・自動ソートされます。</p>
             </div>
             <div class="feature-card">
-                <div class="feature-card-icon">白</div>
-                <h3>螳悟・繝ｭ繝ｼ繧ｫ繝ｫ菫晏ｭ倥・蠎・相縺ｪ縺・/h3>
-                <p>繧｢繧ｫ繧ｦ繝ｳ繝育匳骭ｲ繧・ｺ・相陦ｨ遉ｺ縺ｯ荳蛻・↑縺励ゅΓ繝｢繝・・繧ｿ縺ｯ縺頑焔蜈・・繧ｹ繝槭・繝医ヵ繧ｩ繝ｳ遶ｯ譛ｫ蜀・↓縺ｮ縺ｿ螳牙・縺ｫ菫晏ｭ倥＆繧後∪縺吶・/p>
+                <div class="feature-card-icon">🔒</div>
+                <h3>完全ローカル保存・広告なし</h3>
+                <p>アカウント登録や広告表示は一切なし。メモデータはお手元のスマートフォン端末内にのみ安全に保存されます。</p>
             </div>
         </div>
     </section>
 
     <div style="text-align: center; padding: 20px 20px 60px;">
         <p style="margin-bottom: 16px;">
-            <a href="privacy_policy_site/areatta/privacy.html" style="color: #666; margin: 0 10px; font-size: 0.9rem;">繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ</a>
-            <a href="privacy_policy_site/areatta/terms.html" style="color: #666; margin: 0 10px; font-size: 0.9rem;">蛻ｩ逕ｨ隕冗ｴ・/a>
+            <a href="privacy_policy_site/areatta/privacy.html" style="color: #666; margin: 0 10px; font-size: 0.9rem;">プライバシーポリシー</a>
+            <a href="privacy_policy_site/areatta/terms.html" style="color: #666; margin: 0 10px; font-size: 0.9rem;">利用規約</a>
         </p>
-        <a href="index.html" class="back-link">竊・繝医ャ繝励・繝ｼ繧ｸ縺ｫ謌ｻ繧・/a>
+        <a href="index.html" class="back-link">← トップページに戻る</a>
     </div>
 
-    <!-- 繝輔ャ繧ｿ繝ｼ -->
+    <!-- フッター -->
     <footer style="background-color: #333; color: white; padding: 40px 0; text-align: center;">
         <div class="container">
             <p>&copy; 2026 hovvy. All Rights Reserved.</p>
